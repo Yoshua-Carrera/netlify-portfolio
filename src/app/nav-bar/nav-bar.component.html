@@ -1,0 +1,16 @@
+<div class="content">
+  <button (click)="toggleSideBar()">
+    <div class="insideButton">
+      <!-- <mat-icon>menu</mat-icon> -->
+      <mat-icon>link</mat-icon>
+    </div>
+    <span>Links</span>
+  </button>
+  <div class="linkWords">
+    <a [routerLink]="['/home']" (click)="navigateDown()">Home</a>
+    <a [routerLink]="['/about']" (click)="navigateDown()">About</a>
+    <a [routerLink]="['/portfolio']" (click)="navigateDown()">Portfolio</a>
+    <a [routerLink]="['/contact']" (click)="navigateDown()">Contact</a>
+    <!-- <a>About</a> -->
+  </div>
+</div>
