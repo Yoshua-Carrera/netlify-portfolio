@@ -4,11 +4,74 @@
     background-color: $main-bg-color 
     color: white
 
-.mainContainer
-    height: 100vh
+.mainTitle
+    font-size: 4em
+
+hr
+    width: 80%
+
+.skillContainer
+    border: 1px solid red
+    width: 40%
     display: flex
+    flex-direction: row
+    justify-content: space-evenly
+    flex-wrap: wrap
+    align-items: center
+    border: 1px solid $pink-accent-color
+    border-radius: 1em
+    transition: 2s
+
+.skillContainer:hover
+    box-shadow: ((inset 0 0 0.5em $purple-accent-color, 0 0 0.35em $purple-accent-color), (inset 0 0 0.5em $purple-accent-color, 0 0 0.45em $purple-accent-color))
+
+
+mat-icon
+    font-size: 4em
+
+.skillDetail
+    width: 40%
+    display: flex
+    flex-direction: column
+    gap: 3em
+    justify-content: center
+    align-items: center
+
+.skillDetail:hover
+    text-shadow: $pink-accent-color 0 0 0.5em
+
+.middleContainer
+    width: 100%
+    height: 80%
+    display: flex
+    flex-direction: row
+    justify-content: space-evenly
+
+mat-accordion
+    width: 40% !important
+    border: 1px solid $purple-accent-color
+    border-radius: 1em
+    padding: 2em
+    transition: 2s
+
+mat-accordion:hover
+    box-shadow: ((inset 0 0 0.5em $pink-accent-color, 0 0 0.35em $pink-accent-color), (inset 0 0 0.5em $pink-accent-color, 0 0 0.45em $pink-accent-color))
+
+
+.mainContainer
+    padding-top: 5em
+    min-height: 100vh
+    display: flex
+    flex-direction: column
     justify-content: center
     align-items: center
 
 h2
     padding: 0 3em
+    text-align: left
+
+h2:hover
+    color: $purple-accent-color
+
+.bulletPoint
+    font-size: 1.5rem
