@@ -1,6 +1,40 @@
 <div class="mainContainer">
-    <h2>
-      contact
-    </h2>
+  <h2>If you have any questions, please leave a message~</h2>
+  <br /><br /><br />
+
+  <div class="formContainer">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" validate>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          formControlName="email"
+          required
+        />
+        <mat-error *ngIf="this.email?.invalid && this.email?.touched">
+          This email is invalid
+        </mat-error>
+        <br />
+      </div>
+      <div class="form-group"></div>
+      <br />
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Message</label>
+        <textarea
+          class="form-control"
+          formControlName="message"
+          required
+        ></textarea>
+      </div>
+      <br /><br />
+      <button
+        [disabled]="contactForm?.invalid"
+        type="submit"
+        class="btn btn-primary"
+      >
+        Submit
+      </button>
+    </form>
   </div>
-  
+</div>

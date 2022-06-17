@@ -1,3 +1,13 @@
 <div class="mainContainer">
-  <h2>portfolio</h2>
+  <mat-button-toggle-group
+    #butGroup
+    appearance="legacy"
+    name="fontStyle"
+    aria-label="Font Style"
+  >
+    <mat-button-toggle *ngFor="let option of optionValues" (change)="$event.source.checked ? (toggleValue = option) : (toggleValue = '')">
+      {{option}}
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+  <app-project-cards [option]="toggleValue"></app-project-cards>
 </div>

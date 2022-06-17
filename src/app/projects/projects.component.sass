@@ -1,14 +1,33 @@
 @import '../../styles'
 
 *
-    background-color: $main-bg-color 
+    background-color: $main-bg-color
     color: white
 
 .mainContainer
-    height: 100vh
+    min-height: 100vh
     display: flex
-    justify-content: center
+    flex-direction: column
+    justify-content: space-evenly
     align-items: center
 
-h2
-    padding: 0 3em
+.mat-button-toggle
+    border: 1px $purple-accent-color solid
+    border-radius: 1em
+
+.mat-button-toggle-checked
+    border: 1px $purple-accent-color solid
+    background-color: $purple-accent-color !important
+
+.mat-button-toggle-group
+    padding-top: 6em
+    height: 20%
+    display: flex !important
+    justify-content: center !important
+    align-items: center !important
+    box-shadow: None !important
+    gap: 1em
+
+app-project-cards
+    width: 75%
+    height: 100%

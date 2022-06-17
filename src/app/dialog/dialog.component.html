@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="title">
+    <h1 mat-dialog-title>Responsabilities</h1>
+  </div>
+  <div mat-dialog-content class="mat-dialog-content">
+    <h5 *ngFor="let responsability of data.proj.responsabilities">
+      <mat-icon class="bulletPoint">check_circle</mat-icon> {{ responsability }}
+    </h5>
+    <ngb-carousel
+      #carousel
+      [interval]="10000000"
+      [pauseOnHover]="pauseOnHover"
+      [pauseOnFocus]="pauseOnFocus"
+      [showNavigationArrows]="false"
+      [showNavigationIndicators]="false"
+      (slide)="onSlide($event)"
+    >
+      <ng-template ngbSlide *ngFor="let video of data.proj.videoPreview">
+        <div class="carousel-caption"></div>
+        <a>
+          <div class="picsum-img-wrapper">
+            <h5 class="videoTitle">{{ video.title }}</h5>
+            <hr>
+            <video
+              id="{{ video.url }}"
+              class="img-fluid"
+              loop
+              [muted]="true"
+              *ngIf="data.proj.videoPreview"
+              controls
+            >
+              <source src="{{ video.url }}" type="video/mp4" />
+            </video>
+          </div>
+        </a>
+      </ng-template>
+    </ngb-carousel>
+    <!-- === -->
+  </div>
+  <div class="navButtons">
+    <button class="navButton" (click)="prevVideo($event)">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button class="navButton" (click)="nextVideo($event)">
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
+  <div mat-dialog-actions class="actions">
+    <button class="closeButton" mat-button mat-dialog-close>Close</button>
+  </div>
+</div>

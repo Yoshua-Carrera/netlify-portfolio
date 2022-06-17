@@ -1,0 +1,40 @@
+<div class="container">
+  <mat-card
+    class="example-card"
+    *ngFor="let project of projectsData[option]"
+    (mouseenter)="hover(true, project.id)"
+    (mouseleave)="hover(false, project.id)"
+  >
+    <mat-card-header>
+      <mat-card-title>{{ project.project }}</mat-card-title>
+      <mat-card-subtitle
+        >Client: {{ project.client }} ({{
+          project.location
+        }})</mat-card-subtitle
+      >
+      <mat-card-subtitle>{{ project.timeframe }}</mat-card-subtitle>
+    </mat-card-header>
+      <img
+        [ngStyle]="{
+          filter:
+            hoverState.currentState && hoverState.id === project.id
+              ? 'blur(0.2em)'
+              : 'blur(0)'
+        }"
+        mat-card-image
+        src="{{ project.capture }}"
+        alt="{{ project.project }}"
+      />
+      <button
+        *ngIf="hoverState.id === project.id && hoverState.currentState"
+        (click)="openDialog(project)"
+      >
+        See more
+      </button>
+    <!-- <mat-card-content> </mat-card-content> -->
+    <!-- <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+      </mat-card-actions> -->
+  </mat-card>
+</div>

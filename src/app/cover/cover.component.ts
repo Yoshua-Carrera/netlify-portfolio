@@ -1,5 +1,7 @@
 import { ViewportScroller } from '@angular/common';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { take } from 'rxjs';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-cover',
@@ -8,10 +10,14 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class CoverComponent implements OnInit {
   buttonIcon: string = 'arrow_right_alt'
+  // projectData: any
   @Output() public navigateToggle = new EventEmitter() 
-  constructor(private scroller: ViewportScroller) { }
+  constructor(private scroller: ViewportScroller, private dataS: DataService) { }
 
   ngOnInit(): void {
+    // this.dataS.projectOBS$.pipe(take(1)).subscribe((data: any) => {
+    //   this.projectData = data
+    // })
   }
 
   buttonHover(action: string) {

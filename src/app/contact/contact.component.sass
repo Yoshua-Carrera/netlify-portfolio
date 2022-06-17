@@ -1,14 +1,29 @@
 @import '../../styles'
 
 *
-    background-color: $main-bg-color 
+    background-color: $main-bg-color
+    box-sizing: border-box
     color: white
 
 .mainContainer
     height: 100vh
     display: flex
+    flex-direction: column
     justify-content: center
     align-items: center
+
+.formContainer
+    padding: 4em
+    background-color: $main-bg-color
+    border: 1px solid $purple-accent-color
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+mat-form-field
+    height: 20%
+
 
 h2
     padding: 0 3em

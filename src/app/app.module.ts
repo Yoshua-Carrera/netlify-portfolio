@@ -18,6 +18,15 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { ProjectCardsComponent } from './projects/project-cards/project-cards.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
+import { DialogComponent } from './dialog/dialog.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,7 +38,10 @@ import { MatExpansionModule } from '@angular/material/expansion';
     CoverComponent,
     AboutComponent,
     ContactComponent,
+    ProjectCardsComponent,
+    DialogComponent,
   ],
+  entryComponents: [DialogComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -40,7 +52,14 @@ import { MatExpansionModule } from '@angular/material/expansion';
     BrowserModule,
     BrowserAnimationsModule,
     MatTreeModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatChipsModule,
+    MatButtonToggleModule,
+    MatCardModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
