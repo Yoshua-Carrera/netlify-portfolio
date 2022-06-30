@@ -42,7 +42,7 @@ export const projectCuponcity = {
   id: 3,
   client: 'Cuponcity',
   location: 'Quito, Ecuador',
-  timeframe: 'August 2018 - January 2020',
+  timeframe: 'March 2018 - January 2020',
   project: 'Cuponcity Front End Interface',
   description:
     'Cuponcity delivers an E-commerce all-in-one solution to connect users with a wide variety of businesses from all around Ecuador through offering time bound offers in the form of coupons. The platform allows users to create accounts and purchase products and services organized by category.',

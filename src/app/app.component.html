@@ -1,16 +1,18 @@
-<div class="cover">
-  <app-cover (navigateToggle)="navigateDown()"></app-cover>
-</div>
-<div id="mainContainer" class="mainContainer">
-  <app-nav-bar (sidenavToggle)="snav.toggle()"  (navigateToggle)="navigateDown()"></app-nav-bar>
-  <mat-sidenav-container>
-    
-    <mat-sidenav #snav mode="push" fixedInViewport="true">
-      <app-sidenav></app-sidenav>
-    </mat-sidenav>
-    <mat-sidenav-content>
+<!-- <html> -->
+  <div class="cover">
+    <app-cover (navigateToggle)="navigateDown()"></app-cover>
+  </div>
+  <div id="mainContainer" class="mainContainer">
+    <app-nav-bar (sidenavToggle)="snav.toggle()"  (navigateToggle)="navigateDown()"></app-nav-bar>
+    <mat-sidenav-container>
       
-      <router-outlet></router-outlet>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
-</div>
+      <mat-sidenav #snav mode="push" fixedInViewport="true">
+        <app-sidenav></app-sidenav>
+      </mat-sidenav>
+      <mat-sidenav-content>
+        
+        <router-outlet></router-outlet>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
+<!-- </html> -->
