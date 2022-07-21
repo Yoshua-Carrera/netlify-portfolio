@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormBuilder } from '@angular/forms';
 
 import { ContactComponent } from './contact.component';
 
@@ -8,7 +9,8 @@ describe('ContactComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ContactComponent ]
+      declarations: [ ContactComponent ],
+      providers: [FormBuilder]
     })
     .compileComponents();
   });
@@ -20,6 +22,6 @@ describe('ContactComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(component).toBeDefined();
   });
 });

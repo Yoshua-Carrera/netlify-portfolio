@@ -6,11 +6,13 @@ describe('DataService', () => {
   let service: DataService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({
+      providers: [DataService]
+    });
     service = TestBed.inject(DataService);
   });
 
   it('should be created', () => {
-    expect(service).toBeTruthy();
+    expect(service).toBeDefined();
   });
 });
