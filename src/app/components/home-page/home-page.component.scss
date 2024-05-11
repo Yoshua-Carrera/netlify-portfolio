@@ -1,0 +1,15 @@
+.wave--spacer {
+    aspect-ratio: 960/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.wave--top--layer {
+    background-image: url('../../../assets/top-wave.svg');
+}
+
+.wave--bottom--layer {
+    background-image: url('../../../assets/bottom-wave.svg');
+}
