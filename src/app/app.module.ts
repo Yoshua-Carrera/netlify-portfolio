@@ -19,6 +19,7 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { SkillsetComponent } from './components/skillset/skillset.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { SafeHtmlPipe } from './pipes/safe-html.pipe';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { ContactComponent } from './components/contact/contact.component';
     ProjectsComponent,
     SkillsetComponent,
     ContactComponent,
+    SafeHtmlPipe,
   ],
   imports: [
     MatListModule,

@@ -9,31 +9,6 @@ $main-bg-color: rgb(48, 48, 48);
     background-color: $space-grey;
 }
 
-.wave--spacer {
-    aspect-ratio: 900/400;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
-}
-
-.wave--top--layer {
-    background-image: url('../../../assets/top-wave-a.svg');
-}
-
-.wave--bottom--layer {
-    background-image: url('../../../assets/bottom-wave-joint.svg');
-}
-
-.wave--top--alt--layer {
-    background-image: url('../../../assets/top-wave-a.svg');
-}
-
-.wave--bottom--alt--layer {
-    background-image: url('../../../assets/bottom-wave-b.svg');
-}
-
 .main-container {
     background-color: $space-grey;
 }
@@ -68,9 +43,11 @@ span {
 button {
     width: fit-content;
     padding-top: 8rem;
+    margin-bottom: 10rem;
+    margin-top: 5rem;
     padding: 0.5em 1.5em;
     color: $purple-accent-color;
-    font-size: 2em;
+    font-size: 3rem;
     font-weight: bolder;
     background-color: transparent;
     border-radius: 0.5em;
