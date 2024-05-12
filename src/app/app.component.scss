@@ -1,0 +1,28 @@
+@import '../styles.scss';
+
+nav-bar {
+    display: block;
+    min-height: 4rem;
+    position: fixed;
+    width: 100%;
+}
+
+.side-nav {
+    mat-sidenav {
+        background-color: $space-grey;
+    }
+}
+
+home-page {
+    background-color: $space-grey;
+}
+
+mat-sidenav {
+    width: 80%;
+}
+
+@media (min-width: 475px) {
+    mat-sidenav {
+        width: 0%;
+    }
+}

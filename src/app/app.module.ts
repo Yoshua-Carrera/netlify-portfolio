@@ -1,6 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatListModule } from '@angular/material/list';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
@@ -9,23 +15,34 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { AboutMeComponent } from './components/about-me/about-me.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { SkillsetComponent } from './components/skillset/skillset.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     GenericDialogueComponent,
-    HomePageComponent
+    HomePageComponent,
+    AboutMeComponent,
+    ProjectsComponent,
+    SkillsetComponent,
+    ContactComponent,
   ],
   imports: [
+    MatListModule,
+    MatDividerModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatSlideToggleModule,
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot({}, {}),
-    EffectsModule.forRoot([])
+    EffectsModule.forRoot([]),
   ],
-  providers: [
-    provideAnimationsAsync()
-  ],
-  bootstrap: [AppComponent]
+  providers: [provideAnimationsAsync()],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

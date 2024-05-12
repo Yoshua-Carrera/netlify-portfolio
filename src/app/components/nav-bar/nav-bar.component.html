@@ -1,6 +1,24 @@
-<div class="global-navigation">
-    <p class="headline-1">About</p>
-    <div class="mat-display-4">Projects</div>
-    <p class="about">Skillset</p>
-    <p class="about">About</p>
+<div class="global-navigation dark">
+  <div class="sidenav mobile" (click)="onNavBarClicked($event)"><mat-icon fontIcon="menu"></mat-icon></div>
+  <div class="content-links dark desktop">
+    <p class="mat-h1 glow">
+      <mat-icon fontIcon="info"></mat-icon>
+      <span class="nav-text">About</span>
+    </p>
+    <p class="mat-h1 glow">
+      <mat-icon fontIcon="work"></mat-icon>
+      <span class="nav-text">Projects</span>
+    </p>
+    <p class="mat-h1 glow">
+      <mat-icon fontIcon="grade"></mat-icon>
+      <span class="nav-text">Skillset</span>
+    </p>
+    <p class="mat-h1 glow">
+      <mat-icon fontIcon="phone_iphone"></mat-icon>
+      <span class="nav-text">Contact</span>
+    </p>
+  </div>
+  <div class="dark-mode-toggle dark">
+    <mat-slide-toggle class="dark"></mat-slide-toggle>
+  </div>
 </div>

@@ -1,5 +1,16 @@
 <div class="main-container">
-    <section>
-        <div class="wave--spacer wave--bottom--layer"></div>
-    </section>
+  <section class="cover">
+    <div class="text-content">
+      <h1>My name is <span>Yoshua</span> <br>Here is my work</h1>
+    </div>
+    <button
+      (mouseenter)="buttonHover('enter')"
+      (mouseleave)="buttonHover('leave')"
+      (click)="navigateDown(MainContainerIds.ABOUT)"
+    >
+      Dive in
+      <mat-icon>{{ buttonIcon }}</mat-icon>
+    </button>
+    <div class="wave--spacer wave--bottom--layer"></div>
+  </section>
 </div>

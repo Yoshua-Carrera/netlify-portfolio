@@ -1,11 +1,76 @@
 @use '@angular/material' as mat;
 @include mat.core();
 
+$space-grey: #323231;
+$dim-purple: rgb(113,93,242, 5%);
+
+$dark-theme: mat.define-dark-theme((
+ color: (
+   primary: mat.define-palette(mat.$pink-palette),
+   accent: mat.define-palette(mat.$blue-grey-palette),
+ ),
+  // Only include `typography` and `density` in the default dark theme.
+  typography: mat.define-typography-config(),
+  density: 0,
+));
+
+// Define a light theme
+$light-theme: mat.define-light-theme((
+ color: (
+   primary: mat.define-palette(mat.$indigo-palette),
+   accent: mat.define-palette(mat.$pink-palette),
+ ),
+));
+
+.dark {
+    @include mat.all-component-colors($dark-theme);
+    background-color: $space-grey;
+    color: salmon
+}
+
+.light {
+  @include mat.all-component-colors($light-theme);
+  background-color: white;
+  color: black
+}
+
+.full-height-container {
+  height: 1000px;
+}
+
 * {
-    background-color: #323231;
     color: whitesmoke;
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  background-color: $space-grey;
+}
+body {
+  margin: 0;
+  font-family:
+  Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}

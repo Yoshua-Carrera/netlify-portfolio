@@ -1,2 +1,26 @@
-<nav-bar></nav-bar>
-<home-page></home-page>
+<mat-sidenav-container class="side-nav">
+  <mat-sidenav
+    #sidenav
+    mode="push"
+    (opened)="onSideNavOpen($event)"
+    (closed)="onSideNavClose($event)"
+  >
+  <mat-list>
+    <mat-list-item>Item 1</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>Item 2</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>Item 3</mat-list-item>
+  </mat-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <nav-bar class="dark" (navBarClicked)="sidenav.toggle()"></nav-bar>
+    <home-page class="dark" (navigateToggle)="onNavigateDown($event)"></home-page>
+    <!-- <router-outlet></router-outlet> -->
+    <about-me id="about" class="about" #about></about-me>
+    <contact id="contact" class="contact" #contact></contact>
+    <skillset id="skillset" class="skillset" #skillset></skillset>
+    <projects id="projects" class="projects" #projects></projects>
+    <div id="test"></div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

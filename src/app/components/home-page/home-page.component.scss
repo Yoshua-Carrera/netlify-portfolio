@@ -1,5 +1,16 @@
+@import '../../../styles.scss';
+
+$gray-accent-color: #242424;
+$purple-accent-color: rgb(194,99,253);
+$pink-accent-color: rgb(255,107,178);
+$main-bg-color: rgb(48, 48, 48);
+
+* {
+    background-color: $space-grey;
+}
+
 .wave--spacer {
-    aspect-ratio: 960/300;
+    aspect-ratio: 900/400;
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -7,9 +18,76 @@
 }
 
 .wave--top--layer {
-    background-image: url('../../../assets/top-wave.svg');
+    background-image: url('../../../assets/top-wave-a.svg');
 }
 
 .wave--bottom--layer {
-    background-image: url('../../../assets/bottom-wave.svg');
+    background-image: url('../../../assets/bottom-wave-joint.svg');
+}
+
+.wave--top--alt--layer {
+    background-image: url('../../../assets/top-wave-a.svg');
+}
+
+.wave--bottom--alt--layer {
+    background-image: url('../../../assets/bottom-wave-b.svg');
+}
+
+.main-container {
+    background-color: $space-grey;
+}
+
+.cover {
+    padding-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    line-height: 1;
+    @media (min-width: 400px) {
+        font-size: 1.5rem
+    }
+    @media (min-width: 700px) {
+        font-size: 3rem
+    }
+    @media (min-width: 1000px) {
+        font-size: 5rem
+    }
+}
+
+span {
+    color: $purple-accent-color;
+    text-shadow: $purple-accent-color 0 0 0.2em;
+}
+
+button {
+    width: fit-content;
+    padding-top: 8rem;
+    padding: 0.5em 1.5em;
+    color: $purple-accent-color;
+    font-size: 2em;
+    font-weight: bolder;
+    background-color: transparent;
+    border-radius: 0.5em;
+    border: 1px solid $gray-accent-color;
+    box-shadow: 0 0 0.2em $purple-accent-color;
+    box-shadow: inset 0 0 0.1em $purple-accent-color;
+    text-shadow: $purple-accent-color 0 0 1em;
+    transition: 0.5s;
+}
+
+button:hover {
+    background-color: $purple-accent-color;
+    color: white;
+    border: 1px $purple-accent-color solid;
+    box-shadow: ((inset 0 0 0.5em $purple-accent-color, 0 0 0.15em $purple-accent-color), (inset 0 0 0.3em $purple-accent-color, 0 0 0.25em $purple-accent-color));  
+}
+
+mat-icon {
+    vertical-align: middle !important;
+    font-weight: bold;
+    background-color: transparent;
 }
