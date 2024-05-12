@@ -48,6 +48,15 @@ $light-theme: mat.define-light-theme((
   height: 100vh;
   &.xs {
     height: 35rem;
+    @media (min-width: 400px) {
+      height: 10rem;
+    }
+    @media (min-width: 600) {
+      height: 18rem;
+    }
+    @media (min-width: 900px) {
+      height: 22rem;
+    }
   }
 }
 
@@ -71,6 +80,10 @@ $light-theme: mat.define-light-theme((
   border-bottom: 5px solid purple;
 }
 
+.dark--grey {
+  background-color: $dark-grey;
+}
+
 .simple-link {
   text-decoration: none;
 }
@@ -88,7 +101,7 @@ $light-theme: mat.define-light-theme((
 
 .undeline--effect::before {
   content: '';
-  top: 3.5rem;
+  top: 4.5rem;
   width: 0%;
   height: 0.75rem;
   position: absolute;

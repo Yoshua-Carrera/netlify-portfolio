@@ -3,11 +3,18 @@ export interface ContentCopy {
     cover: any;
     aboutMe: AboutMeCopy;
     projects: any;
-    skillset: any;
+    experience: ExperienceCopy;
     contact: any;
 }
 
 export interface AboutMeCopy {
+    header: string,
+    mainBody: string,
+    subBody: string
+    portrait: string
+}
+
+export interface ExperienceCopy {
     header: string,
     mainBody: string,
     subBody: string

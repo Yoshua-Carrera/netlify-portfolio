@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SkillsetComponent } from './skillset.component';
+import { SkillsetComponent } from './experience.component';
 
 describe('SkillsetComponent', () => {
   let component: SkillsetComponent;

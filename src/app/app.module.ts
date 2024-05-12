@@ -17,7 +17,7 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { ProjectsComponent } from './components/projects/projects.component';
-import { SkillsetComponent } from './components/skillset/skillset.component';
+import { ExperienceComponent } from './components/experience/experience.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { SafeHtmlPipe } from './pipes/safe-html.pipe';
 
@@ -29,7 +29,7 @@ import { SafeHtmlPipe } from './pipes/safe-html.pipe';
     HomePageComponent,
     AboutMeComponent,
     ProjectsComponent,
-    SkillsetComponent,
+    ExperienceComponent,
     ContactComponent,
     SafeHtmlPipe,
   ],

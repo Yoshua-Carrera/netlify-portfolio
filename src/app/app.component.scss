@@ -20,11 +20,13 @@ home-page {
 }
 
 mat-sidenav {
+    position: fixed;
     width: 80%;
 }
 
 @media (min-width: 475px) {
     mat-sidenav {
+        position: relative;
         width: 0%;
     }
 }

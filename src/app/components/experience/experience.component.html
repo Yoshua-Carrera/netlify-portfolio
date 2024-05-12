@@ -1,0 +1,13 @@
+<div class="full-height-container dark--grey">
+    <header class="mat-headline-2 watch--underline">{{ experienceCopy.header }}</header>
+    <div class="main-body">
+        <p class="mat-headline-4 watch--fade--in faded" [innerHTML]="experienceCopy.mainBody | safeHtml"></p>
+    </div>
+    <div class="sub-body">
+        <p class="mat-headline-4 watch--fade--in faded" [innerHTML]="experienceCopy.subBody| safeHtml"></p>
+    </div>
+    <div class="carousel">
+        <div class="carousel-moving-container scroll--effect">
+        </div>
+    </div>
+</div>
