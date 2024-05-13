@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { MainContainerIds } from '../../models/navigation.models';
+import { MainContainerIds } from '../../models/navigation.model';
 
 @Component({
   selector: 'home-page',

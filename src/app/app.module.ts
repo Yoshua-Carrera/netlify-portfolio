@@ -14,6 +14,8 @@ import { GenericDialogueComponent } from './components/generic-dialogue/generic-
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { HomePageComponent } from './components/home-page/home-page.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { ProjectsComponent } from './components/projects/projects.component';
@@ -34,6 +36,8 @@ import { SafeHtmlPipe } from './pipes/safe-html.pipe';
     SafeHtmlPipe,
   ],
   imports: [
+    MatCardModule,
+    MatGridListModule,
     MatListModule,
     MatDividerModule,
     MatSidenavModule,

@@ -1,13 +1,75 @@
 <div class="full-height-container dark--grey">
-    <header class="mat-headline-2 watch--underline">{{ experienceCopy.header }}</header>
-    <div class="main-body">
-        <p class="mat-headline-4 watch--fade--in faded" [innerHTML]="experienceCopy.mainBody | safeHtml"></p>
-    </div>
-    <div class="sub-body">
-        <p class="mat-headline-4 watch--fade--in faded" [innerHTML]="experienceCopy.subBody| safeHtml"></p>
-    </div>
-    <div class="carousel">
-        <div class="carousel-moving-container scroll--effect">
+  <header class="mat-headline-2 watch--underline pink--accent">
+    {{ experienceCopy.header }}
+  </header>
+  <mat-grid-list cols="21" rowHeight="100px">
+    @for (tile of tiles; track tile) {
+    <mat-grid-tile
+      [colspan]="tile.cols"
+      [rowspan]="tile.rows"
+      [style.background]="tile.color"
+      [ngClass]="tile.className"
+    >
+      <div class="grid-content" [ngSwitch]="tile.className">
+        <div
+          [ngClass]="gridClasses.LEFT_MESSAGE"
+          *ngSwitchCase="gridClasses.LEFT_MESSAGE"
+        >
+          <mat-card class="timeline-card" *ngIf="tile.company">
+            <mat-card-header>
+              <mat-card-title
+                [innerHTML]="experienceCopy[tile.company]?.company | safeHtml"
+              ></mat-card-title>
+              <mat-card-subtitle
+                [innerHTML]="experienceCopy[tile.company]?.position | safeHtml"
+              ></mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+              <p
+                [innerHTML]="experienceCopy[tile.company]?.dates | safeHtml"
+              ></p>
+              <p
+                [innerHTML]="
+                  experienceCopy[tile.company]?.description | safeHtml
+                "
+              ></p>
+            </mat-card-content>
+          </mat-card>
         </div>
-    </div>
+        <div
+          [ngClass]="gridClasses.TIMELINE_SHAPE"
+          *ngSwitchCase="gridClasses.TIMELINE_SHAPE"
+        >
+          <mat-icon [fontIcon]="tile.icon"></mat-icon>
+          <div class="timeline-middle-construct"></div>
+        </div>
+        <div
+          [ngClass]="gridClasses.RIGHT_MESSAGE"
+          *ngSwitchCase="gridClasses.RIGHT_MESSAGE"
+        >
+          <mat-card class="timeline-card" *ngIf="tile.company">
+            <mat-card-header>
+              <mat-card-title
+                [innerHTML]="experienceCopy[tile.company]?.company | safeHtml"
+              ></mat-card-title>
+              <mat-card-subtitle
+                [innerHTML]="experienceCopy[tile.company]?.position | safeHtml"
+              ></mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+              <p
+                [innerHTML]="experienceCopy[tile.company]?.dates | safeHtml"
+              ></p>
+              <p
+                [innerHTML]="
+                  experienceCopy[tile.company]?.description | safeHtml
+                "
+              ></p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </mat-grid-tile>
+    }
+  </mat-grid-list>
 </div>

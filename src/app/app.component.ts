@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MainContainerIds } from './models/navigation.models';
+import { MainContainerIds } from './models/navigation.model';
 import { ViewportScroller } from '@angular/common';
 
 @Component({

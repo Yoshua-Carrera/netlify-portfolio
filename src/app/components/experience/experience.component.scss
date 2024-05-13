@@ -1,1 +1,21 @@
 @import '../../../styles.scss';
+
+.timeline-middle-construct {
+    background-color: $main-indigo;
+    height: 100%;
+    width: 0.5rem;
+}
+
+.grid-content, .timeline-shape {
+    height: 100%;
+    mat-icon {
+        color: $main-pink;
+    }
+}
+
+.timeline-shape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

@@ -16,7 +16,15 @@ export interface AboutMeCopy {
 
 export interface ExperienceCopy {
     header: string,
-    mainBody: string,
-    subBody: string
-    portrait: string
+    sicobra: ExperienceDetails,
+    cuponCity: ExperienceDetails,
+    fairfieldUniversity: ExperienceDetails,
+    charterCommunications: ExperienceDetails,
+}
+
+export interface ExperienceDetails {
+    company: string,
+    position: string,
+    dates: string,
+    description: string,
 }
