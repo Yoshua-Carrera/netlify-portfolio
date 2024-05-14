@@ -9,7 +9,7 @@ import { ViewportScroller } from '@angular/common';
 })
 export class AppComponent implements OnInit {
   title: string = 'netlify-portfolio';
-  opened: boolean = true
+  sideMenuOpen: boolean = false
 
   ngOnInit(): void {
      
@@ -17,10 +17,15 @@ export class AppComponent implements OnInit {
 
   onSideNavOpen(event: any) {
     console.log('open')
+    const body = document.getElementsByTagName('body')[0];
+    body.classList.add('no-scroll-y');
   }
 
   onSideNavClose(event: any) {
     console.log('close')
+    this.sideMenuOpen = false
+    const body = document.getElementsByTagName('body')[0];
+    body.classList.remove('no-scroll-y');
   }
 
   onNavigateDown(target: MainContainerIds) {

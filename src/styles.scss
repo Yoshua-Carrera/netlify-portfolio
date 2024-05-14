@@ -116,6 +116,14 @@ $light-theme: mat.define-light-theme((
   background-color: $main-pink;
 }
 
+.no-scroll-y {
+  overflow-y: hidden;
+}
+
+.no-scroll-x {
+  overflow-x: hidden;
+}
+
 @keyframes underline-growth {
   to { width: 100%; }
 }

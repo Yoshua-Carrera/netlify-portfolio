@@ -29,7 +29,6 @@ export class ExperienceComponent implements OnInit, AfterViewInit {
       'transparent',
       'radio_button_checked'
     );
-    console.log()
     this.intersectionObserver = (tagetClass: string) => new IntersectionObserver((entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry: IntersectionObserverEntry) => {
         console.log(entry)
