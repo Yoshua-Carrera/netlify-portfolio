@@ -14,6 +14,10 @@ mat-card-content {
   padding-bottom: 0.25rem !important;
 }
 
+mat-card-header {
+  padding-left: 0.5rem;
+}
+
 mat-card:hover {
   img {
     filter: blur(0.2rem);
