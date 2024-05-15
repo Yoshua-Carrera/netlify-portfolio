@@ -24,8 +24,11 @@ $main-bg-color: rgb(48, 48, 48);
 h1 {
     text-align: center;
     line-height: 1;
-    @media (min-width: 400px) {
+    @media (min-width: 300px) {
         font-size: 2rem
+    }
+    @media (min-width: 400px) {
+        font-size: 3rem
     }
     @media (min-width: 700px) {
         font-size: 3rem
@@ -42,10 +45,9 @@ span {
 
 button {
     width: fit-content;
-    padding-top: 8rem;
     margin-bottom: 5rem;
     margin-top: 5rem;
-    padding: 0.5em 1.5em;
+    padding: 0.5rem 1.5rem;
     color: $purple-accent-color;
     font-size: 3rem;
     font-weight: bolder;
@@ -56,8 +58,8 @@ button {
     box-shadow: inset 0 0 0.1em $purple-accent-color;
     text-shadow: $purple-accent-color 0 0 1em;
     transition: 0.5s;
-    @media (min-width: 500) {
-        font-size: 1.5rem
+    @media (max-width: 500px) {
+        font-size: 2.5rem;
     }
 }
 

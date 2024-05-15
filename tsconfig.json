@@ -5,7 +5,10 @@
     "baseUrl": "src",
     "paths": {
       "@core-assets/*": ["assets/*"],
-      "@core-services/*": ["app/services/*"]
+      "@core-services/*": ["app/services/*"],
+      "@core-components/*": ["app/components/*"],
+      "@core-models/*": ["app/models/*"],
+      "@core-store/*": ["app/store/*"],
     },
     "strictNullChecks": false,
     "resolveJsonModule": true,

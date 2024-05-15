@@ -1,10 +1,16 @@
 {
     "content": {
         "header": {
-            
+            "about": "About",
+            "projects": "Projects",
+            "experience": "Experience",
+            "contact": "Contact"
         },
         "cover": {
-            
+            "myNameIs": "My name is",
+            "name": "Yoshua",
+            "hereIsMyWork": "Here is my work",
+            "buttonText": "Dive in"
         },
         "aboutMe": {
             "header": "About Me",
@@ -13,7 +19,40 @@
             "portrait": "../../../assets/images/portrait.jpg"
         },
         "projects": {
-
+            "header": "Latest Projects",
+            "seeMore": "See More",
+            "cuponcity": {
+                "name": "Cuponcity ECU",
+                "clientName": "Cuponcity",
+                "timeFrame": "August 2017 - October 2018",
+                "screenshot": "../../../../assets/images/projects/cuponcity.PNG",
+                "location": "[Quito Ecuador]",
+                "hoverTextColor": "dark-text"
+            },
+            "catManga": {
+                "name": "Cat Manga",
+                "clientName": "Black Cat",
+                "timeFrame": "April 2020 - June 2021",
+                "screenshot": "../../../../assets/images/projects/catmanga.PNG",
+                "location": "[Remote]",
+                "hoverTextColor": "light-text"
+            },
+            "chemquestApp": {
+                "name": "Chemquest APP",
+                "clientName": "Fairfield University",
+                "timeFrame": "June 2020 - December 2021",
+                "screenshot": "../../../../assets/images/projects/chemquest.PNG",
+                "location": "[Fairfield CT]",
+                "hoverTextColor": "dark-text"
+            },
+            "spectrumWeb": {
+                "name": "Spectrum NET",
+                "clientName": "Charter Communications",
+                "timeFrame": "May 2022 - Present",
+                "screenshot": "../../../../assets/images/projects/spectrum.PNG",
+                "location": "[Quito Ecuador]",
+                "hoverTextColor": "dark-text"
+            }
         },
         "experience": {
             "header": "Experience",
@@ -33,11 +72,11 @@
                 "company": "<strong class='bottom-border'><a href='https://www.fairfield.edu/' class='simple-link' target='_blank'>Fairfield University</a></strong>",
                 "position": "Ionic/Angular Developer",
                 "dates": "2020 - 2022 [Fairfield CT]",
-                "description": "Fairfield University funded the project <strong class='bottom-border'><a href='https://apps.apple.com/us/app/chemquest/id1519862519' class='simple-link' target='_blank'>Chemquest App</a></strong> which aimed to build a chemistry companion app that could be used as a tool for studying. It also allows users to hand-sketch chemical compounds and it will attempt to predict the isomer using SMILES notation. It integrates with PubMed"   
+                "description": "Fairfield University funded the project <span class='bottom-border'><a href='https://apps.apple.com/us/app/chemquest/id1519862519' class='simple-link' target='_blank'>Chemquest App</a></span> which aimed to build a chemistry companion app that could be used as a tool for studying. It also allows users to hand-sketch chemical compounds and it will attempt to predict the isomer using SMILES notation. It integrates with PubMed"   
             },
             "charterCommunications": {
                 "company": "<strong class='bottom-border'><a href='https://www.spectrum.net/' class='simple-link' target='_blank'>Charter Communications</a></strong>",
-                "position": "Sr. Developer",
+                "position": "Senior Developer",
                 "dates": "2022 - present [Denver, CO (remote)]",
                 "description": "Charter is one of the biggest telcom companies in the USA, It serves 32 million users in 41 states. Lead developer of 3 features (as of may 2024). Main lead of Service Appointments which on average has served 104K users with a <strong class = 'bottom-border'>98.16%</strong> success rate on its flows."   
             }

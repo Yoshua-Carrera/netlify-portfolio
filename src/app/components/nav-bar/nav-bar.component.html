@@ -1,21 +1,21 @@
 <div class="global-navigation dark">
-  <div class="sidenav mobile" (click)="onNavBarClicked($event)"><mat-icon fontIcon="menu"></mat-icon></div>
+  <div class="sidenav mobile" (click)="onNavBarClicked($event)"><mat-icon [fontIcon]="materialIcons.MENU"></mat-icon></div>
   <div class="content-links dark desktop">
     <p class="mat-h1 glow">
       <mat-icon fontIcon="info"></mat-icon>
-      <span class="nav-text">About</span>
+      <span class="nav-text">{{ headerCopy.about }}</span>
     </p>
     <p class="mat-h1 glow">
       <mat-icon fontIcon="work"></mat-icon>
-      <span class="nav-text">Projects</span>
+      <span class="nav-text">{{ headerCopy.experience }}</span>
     </p>
     <p class="mat-h1 glow">
       <mat-icon fontIcon="grade"></mat-icon>
-      <span class="nav-text">Skillset</span>
+      <span class="nav-text">{{ headerCopy.projects }}</span>
     </p>
     <p class="mat-h1 glow">
       <mat-icon fontIcon="phone_iphone"></mat-icon>
-      <span class="nav-text">Contact</span>
+      <span class="nav-text">{{ headerCopy.contact }}</span>
     </p>
   </div>
   <div class="dark-mode-toggle dark">

@@ -1,7 +1,7 @@
 @use '@angular/material' as mat;
 @include mat.core();
 
-$space-grey: #323231;
+$space-grey: rgb(50,50,49);
 $dim-purple: rgb(113,93,242, 5%);
 $main-indigo: rgb(102,0,255);
 $main-pink: rgb(213,0,196);
@@ -9,6 +9,10 @@ $dark-grey: rgb(26, 24, 26);
 $cgp-grey: rgb(30, 30, 30);
 $dark-grey-opacity-0: rgba(26, 24, 26, 0);
 $dark-grey-opacity-50: rgba(26, 24, 26, 50%);
+$blur: 0.5rem;
+$box-blur: calc(0.25 * var($blur));
+$glow: white;
+$size: 12rem;
 
 $dark-theme: mat.define-dark-theme((
  color: (
@@ -141,6 +145,10 @@ $light-theme: mat.define-light-theme((
   animation: scrolling 45s infinite
 }
 
+.justify {
+  text-align: justify;
+}
+
 @keyframes fade-in {
   to { opacity: 1; }
 }
@@ -156,6 +164,7 @@ $light-theme: mat.define-light-theme((
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    line-height: 1.5;
     scroll-behavior: smooth;
 }
 html, body { height: 100%; }

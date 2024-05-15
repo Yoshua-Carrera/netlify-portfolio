@@ -1,14 +1,14 @@
 <div class="main-container">
   <section class="cover">
     <div class="text-content">
-      <h1>My name is <span>Yoshua</span> <br>Here is my work</h1>
+      <h1>{{ coverCopy.myNameIs }} <span>{{ coverCopy.name }}</span> <br>{{ coverCopy.hereIsMyWork }}</h1>
     </div>
     <button
-      (mouseenter)="buttonHover('enter')"
-      (mouseleave)="buttonHover('leave')"
+      (mouseenter)="buttonHover(buttonHoverActions.ENTER)"
+      (mouseleave)="buttonHover(buttonHoverActions.LEAVE)"
       (click)="navigateDown(MainContainerIds.ABOUT)"
     >
-      Dive in
+      {{ coverCopy.buttonText }}
       <mat-icon>{{ buttonIcon }}</mat-icon>
     </button>
     <div class="wave--spacer wave--bottom--layer"></div>

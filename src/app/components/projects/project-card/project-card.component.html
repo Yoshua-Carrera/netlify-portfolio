@@ -1,0 +1,20 @@
+<mat-card
+  class="example-card"
+  (mouseenter)="cardHover(true, projectConfig.name)"
+  (mouseleave)="cardHover(false, projectConfig.name)"
+>
+  <mat-card-header>
+    <mat-card-title>{{ projectConfig.name }}</mat-card-title>
+    <mat-card-subtitle>
+      {{ projectConfig.clientName }}
+      {{ projectConfig.location }}
+    </mat-card-subtitle>
+    <mat-card-subtitle>{{ projectConfig.timeFrame }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <img [src]="projectConfig.screenshot" [alt]="projectConfig.name" />
+    <div class="hover-text">
+      <h1 [class]="projectConfig.hoverTextColor">{{ projectsCopy.seeMore }}</h1>
+    </div>
+  </mat-card-content>
+</mat-card>

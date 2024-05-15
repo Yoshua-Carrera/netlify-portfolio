@@ -1,19 +1,20 @@
 @import "../../../styles.scss";
 
-$blur: 0.5rem;
-$box-blur: calc(0.25 * var($blur));
-$glow: white;
-$size: 12rem;
-
 .global-navigation,
 .content-links {
   display: flex;
   justify-content: center;
   width: 100%;
+  min-height: 3rem;
 }
 
 .global-navigation {
   padding: 1rem;
+}
+
+.dark-mode-toggle {
+  display: flex;
+  align-items: center;
 }
 
 .sidenav {
@@ -30,6 +31,12 @@ $size: 12rem;
 
 mat-icon {
   fill: none;
+  width: 2rem;
+  height: 3rem;
+}
+
+mat-icon::before {
+  font-size: 2rem;
 }
 
 mat-icon:hover {
@@ -46,11 +53,6 @@ p {
 @media (min-width: 475px) {
   .content-links {
     gap: 4rem;
-  }
-  mat-icon {
-    width: 2rem;
-    height: 2rem;
-    font-size: 2rem;
   }
   .nav-text {
     display: none;
@@ -136,10 +138,5 @@ p {
     }
     .global-navigation {
         justify-content: space-between;
-    }
-    mat-icon {
-      width: 2rem;
-      height: 2rem;
-      font-size: 2rem;
     }
   }

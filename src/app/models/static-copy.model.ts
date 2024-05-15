@@ -1,16 +1,53 @@
 export interface ContentCopy {
-    header: any;
-    cover: any;
+    header: headerCopy;
+    cover: CoverCopy;
     aboutMe: AboutMeCopy;
-    projects: any;
+    projects: ProjectsCopy;
     experience: ExperienceCopy;
     contact: any;
+}
+
+export interface ProjectsCopy {
+    header: string;
+    seeMore: string;
+    catManga: ProjectDetails;
+    cuponcity: ProjectDetails;
+    chemquestApp: ProjectDetails;
+    spectrumWeb: ProjectDetails;
+}
+
+export interface ProjectDetails {
+    name: string;
+    hoverTextColor: string;
+    clientName: string;
+    timeFrame: string;
+    screenshot: string;
+    location: string;
+}
+
+export interface headerCopy {
+    about: string;
+    projects: string;
+    experience: string;
+    contact: string;
+}
+
+export interface CoverCopy {
+    myNameIs: string;
+    name: string;
+    hereIsMyWork: string;
+    buttonText: string;
+}
+
+export interface CoverbuttonsCopy {
+    ARROW_DOWNWARD: string
+    ARROW_RIGHT_ALT: string
 }
 
 export interface AboutMeCopy {
     header: string,
     mainBody: string,
-    subBody: string
+    subBody: string,
     portrait: string
 }
 

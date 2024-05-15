@@ -4,7 +4,8 @@ export interface TimelineTile {
     rows: number;
     text: string;
     className: GridTimelineClass;
-    icon: string;
+    startIcon?: string;
+    endIcon?: string;
     company?: ExperienceCompanies;
   }
 

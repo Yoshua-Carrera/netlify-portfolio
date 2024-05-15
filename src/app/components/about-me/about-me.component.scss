@@ -39,22 +39,31 @@
     pointer-events: none;
     background-image: linear-gradient(to right, $dark-grey, $dark-grey-opacity-50, $dark-grey-opacity-0, $dark-grey-opacity-50, $dark-grey);
     width: 100vw;
-    height: 5rem;
+    height: 7rem;
 }
 
 .carousel-item {
   border: solid 4px $space-grey;
   background-color: whitesmoke;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 600;
   color: $space-grey;
-  padding: 0.50rem;
+  padding: 0.5rem;
   border-radius: 0.75rem;
   display: flex;
   justify-content: center;
   min-height: 4.5rem;
   min-width: 8rem;
   align-items: center;
+  box-sizing: content-box;
+}
+
+p {
+  padding-left: 2rem;
+}
+
+.sub-body > p {
+  padding-right: 5rem;
 }
 
 strong {
@@ -66,8 +75,8 @@ strong {
     flex-direction: column;
     gap: 1.5rem;
   }
-  .portrait {
-    width: 80%;
+  .top-text, .bottom-text {
+    text-align: left;
   }
 }
 
@@ -75,5 +84,8 @@ strong {
   .main-body {
     flex-direction: column;
     gap: 1.5rem;
+  }
+  .top-text {
+    padding-right: 2rem;
   }
 }
