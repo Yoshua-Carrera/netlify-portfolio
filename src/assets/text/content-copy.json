@@ -35,7 +35,7 @@
         },
         "aboutMe": {
             "header": "About Me",
-            "mainBody": "Experienced Developer with over 5 years of experience. <strong class='bottom-border'>strongly</strong> motivated by curiosity and want for <strong class='bottom-border'>mastery</strong>. <br> Currently working full time as a Senior Software Engineer for <strong class='bottom-border'><a href='https://www.spectrum.com/' class='simple-link' target='_blank'>Charter Communications</a></strong>.",
+            "mainBody": "Experienced Developer with over 5 years of experience. <strong>strongly</strong> motivated by curiosity and want for <strong>mastery</strong>. <br> Currently working full time as a Senior Software Engineer for <strong class='bottom-border'><a href='https://www.spectrum.com/' class='simple-link' target='_blank'>Charter Communications</a></strong>.",
             "subBody": "Data enthusiast who is driven by results, previously graduated with a M.S in Applied Data Science. <br> Former Data scientist (2018), which shaped many of the approaches I take as a software engineer today.",
             "portrait": "../../../assets/images/portrait.jpg"
         },
@@ -103,7 +103,7 @@
                 "company": "<strong class='bottom-border'><a href='https://www.spectrum.net/' class='simple-link' target='_blank'>Charter Communications</a></strong>",
                 "position": "Senior Developer",
                 "dates": "2022 - present [Denver, CO (remote)]",
-                "description": "Charter is one of the biggest telcom companies in the USA, It serves 32 million users in 41 states. Lead developer of 3 features (as of may 2024). Main lead of Service Appointments which on average has served 104K users with a <strong class = 'bottom-border'>98.16%</strong> success rate on its flows."   
+                "description": "Charter is one of the biggest telcom companies in the USA, It serves 32 million users in 41 states. Lead developer of 3 features (as of may 2024). Main lead of Service Appointments which on average has served 104K users with a <strong>98.16%</strong> success rate on its flows."   
             }
         },
         "contact": {
@@ -119,6 +119,11 @@
                     "name": "Email",
                     "subtitle": "<a href='mailto:yoshua.carrera24@gmail.com'>yoshua.carrera24@gmail.com</a>",
                     "img": "../../../assets/images/contact-mediums/gmail-logo.svg"
+                },
+                "linkedin": {
+                    "name": "Linkedin",
+                    "subtitle": "<a href='https://www.linkedin.com/in/yoshua-carrera/' target='_blank'>www.linkedin.com/in/yoshua-carrera</a>",
+                    "img": "../../../assets/images/contact-mediums/linkedin-logo.svg"
                 },
                 "phoneNumber": {
                     "name": "Phone Number",
