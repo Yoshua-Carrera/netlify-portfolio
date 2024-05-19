@@ -21,3 +21,8 @@ export enum ExperienceCompanies {
   FAIRFIELD_UNIVERSITY='fairfieldUniversity',
   CHARTER_COMMUNICATIONS='charterCommunications',
 }
+
+export enum TimelimeVersions {
+  LEGACY='legacy', 
+  REDESIGN='redesign', 
+}

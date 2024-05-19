@@ -27,6 +27,9 @@ import { ContactComponent } from '@core-components/contact/contact.component';
 import { ProjectCardComponent } from './components/projects/project-card/project-card.component';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { NetlifyStoreModule } from '@core-store/netlify-store.module';
+import { GridTimelineComponent } from './components/experience/grid-timeline/grid-timeline.component';
+import { TimelineCardComponent } from './components/experience/timeline-card/timeline-card.component';
+import { TimelineRedesignedComponent } from './components/experience/timeline-redesigned/timeline-redesigned.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +43,9 @@ import { NetlifyStoreModule } from '@core-store/netlify-store.module';
     ContactComponent,
     SafeHtmlPipe,
     ProjectCardComponent,
+    GridTimelineComponent,
+    TimelineCardComponent,
+    TimelineRedesignedComponent,
   ],
   imports: [
     NetlifyStoreModule,

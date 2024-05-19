@@ -1,11 +1,16 @@
+import { ApplicationToggles } from "./toggle-config.model"
+
 export interface NetlifyState {
-    dialogueState: DialogueState
+    dialogueState: DialogueState;
+    applicationToggles: ApplicationToggles;
+
 }
 
 export interface DialogueState {
-    dialogueType: string
+    dialogueType: string;
 }
 
 export const initialNetlifyState: NetlifyState = {
-    dialogueState: null
+    dialogueState: null,
+    applicationToggles: null
 }
