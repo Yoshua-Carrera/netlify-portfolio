@@ -1,0 +1,15 @@
+<div class="main" *ngIf="{ applicationToggles: applicationToggles$ | async } as variables">
+  <mat-card class="timeline-card" *ngIf="tile.company">
+    <mat-card-header>
+      <mat-card-title [innerHTML]="experienceCopy[tile.company]?.company | safeHtml"></mat-card-title>
+      <mat-card-subtitle [innerHTML]="experienceCopy[tile.company]?.dates | safeHtml"></mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content [class]="variables.applicationToggles.timelineRedesign ? version.REDESIGN : version.LEGACY">
+      <p [innerHTML]="experienceCopy[tile.company]?.position | safeHtml" class="mat-h3 justify"></p>
+      <p [innerHTML]="experienceCopy[tile.company]?.description | safeHtml" class="mat-h4 justify"></p>
+    </mat-card-content>
+    <img [src]="experienceCopy[tile.company]?.thumbnail" class="thumbnail {{ tile.className }}" >
+    <div class="arrow {{ tile.className }}"></div>
+  </mat-card>
+</div>
+

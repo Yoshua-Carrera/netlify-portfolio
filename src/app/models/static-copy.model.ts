@@ -88,4 +88,5 @@ export interface ExperienceDetails {
     position: string,
     dates: string,
     description: string,
+    thumbnail: string
 }

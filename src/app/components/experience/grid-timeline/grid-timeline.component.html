@@ -1,0 +1,13 @@
+<div class="grid-content" [ngSwitch]="tile.className">
+  <div [ngClass]="gridClasses.LEFT_MESSAGE" *ngSwitchCase="gridClasses.LEFT_MESSAGE">
+    <timeline-card [tile]="tile" [experienceCopy]="experienceCopy"></timeline-card>
+  </div>
+  <div [ngClass]="gridClasses.TIMELINE_SHAPE" *ngSwitchCase="gridClasses.TIMELINE_SHAPE">
+    <mat-icon *ngIf="tile.startIcon" [fontIcon]="tile.startIcon"></mat-icon>
+    <div class="timeline-middle-construct"></div>
+    <mat-icon *ngIf="tile.endIcon" [fontIcon]="tile.endIcon"></mat-icon>
+  </div>
+  <div [ngClass]="gridClasses.RIGHT_MESSAGE" *ngSwitchCase="gridClasses.RIGHT_MESSAGE">
+    <timeline-card [tile]="tile" [experienceCopy]="experienceCopy"></timeline-card>
+  </div>
+</div>

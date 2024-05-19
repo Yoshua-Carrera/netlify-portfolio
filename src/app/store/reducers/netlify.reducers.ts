@@ -1,5 +1,5 @@
 import { NetlifyState, initialNetlifyState } from "@core-models/netlify-state.model";
-import { launchDialogue } from "@core-store/actions/netlify.actions";
+import { launchDialogue, loadToggleConfig } from "@core-store/actions/netlify.actions";
 import { Action, createReducer, on } from "@ngrx/store";
 
 export const NETLIFY_STORE_KEY = 'netlify';
@@ -12,6 +12,10 @@ const reducer = createReducer(
             ...state.dialogueState,
             dialogueType
         }
+    })),
+    on(loadToggleConfig, (state, { applicationToggles }): NetlifyState => ({
+        ...state,
+        applicationToggles
     }))
 )
 

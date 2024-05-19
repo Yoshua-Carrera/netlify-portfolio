@@ -1,9 +1,12 @@
 import { DOCUMENT } from '@angular/common';
 import { AfterViewInit, Component, HostListener, Inject, OnInit } from '@angular/core';
+import { ExperienceCopy } from '@core-models/static-copy.model';
+import { ExperienceCompanies, GridTimelineClass, TimelimeVersions, TimelineTile } from '@core-models/timeline.model';
+import { ApplicationToggles } from '@core-models/toggle-config.model';
 import { StaticCopyService } from '@core-services/static-copy.service';
 import { TimelineGridService } from '@core-services/timeline-grid.service';
-import { ExperienceCopy } from 'app/models/static-copy.model';
-import { ExperienceCompanies, GridTimelineClass, TimelineTile } from 'app/models/timeline.model';
+import { NetlifyFacade } from '@core-store/facades/netlify-facade';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'experience',
@@ -15,13 +18,15 @@ export class ExperienceComponent implements OnInit, AfterViewInit {
   intersectionObserver: (tagetClass: string) => IntersectionObserver;
   gridClasses: typeof GridTimelineClass = GridTimelineClass;
   experienceCompanies: typeof ExperienceCompanies = ExperienceCompanies;
-  timelineElements: NodeListOf<Element>;
+  timelimeVersions: typeof TimelimeVersions = TimelimeVersions;
   experienceCopy: ExperienceCopy;
   tiles: TimelineTile[];
   window: Window;
   rowHeight: string;
+  applicationToggles$: Observable<ApplicationToggles> = this.netlifyFacade.getApplicationToggles$
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
+    console.log(this.window.innerWidth)
     this.rowHeight = this.timelineGridService.calculateRowHeight(this.window.innerWidth)
   }
 
@@ -38,22 +43,14 @@ export class ExperienceComponent implements OnInit, AfterViewInit {
       'radio_button_checked',
       4
     );
-    this.intersectionObserver = (tagetClass: string) => new IntersectionObserver((entries: IntersectionObserverEntry[]) => {
-      entries.forEach((entry: IntersectionObserverEntry) => {
-        if(entry.isIntersecting) {
-          entry.target.classList.add(tagetClass)
-        }
-      })
-    })
   }
   ngAfterViewInit(): void {
-    this.timelineElements = document.querySelectorAll('.timeline-card')
-    this.timelineElements.forEach((element: Element) => this.intersectionObserver('fade--in-effect').observe(element))
   }
 
   constructor(
     private staticCopyService: StaticCopyService,
     private timelineGridService: TimelineGridService,
+    private netlifyFacade: NetlifyFacade,
     @Inject(DOCUMENT) private document: Document
   ) {
     this.window = this.document.defaultView

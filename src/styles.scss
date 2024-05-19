@@ -5,7 +5,9 @@ $space-grey: rgb(50,50,49);
 $dim-purple: rgb(113,93,242, 5%);
 $main-indigo: rgb(102,0,255);
 $tame-indigo: rgba(102,0,255, 25%);
+$hover-purple: rgb(226 213 246);
 $main-pink: rgb(213,0,196);
+$card-grey: rgb(66,66,66);
 $dark-grey: rgb(26, 24, 26);
 $cgp-grey: rgb(30, 30, 30);
 $dark-grey-opacity-0: rgba(26, 24, 26, 0);
@@ -126,6 +128,10 @@ $light-theme: mat.define-light-theme((
   text-decoration: none;
 }
 
+.simple-link:hover {
+  color: $hover-purple;
+}
+
 .full-height-container {
   min-height: 100vh;
   padding: 5rem 1rem 1rem 1rem
@@ -171,19 +177,32 @@ $light-theme: mat.define-light-theme((
 
 .fade--in-effect {
   opacity: 0;
-  animation: fade-in 1.75s linear forwards;
+  animation: fade-in 1s linear forwards;
 }
 
 .scroll--effect {
   animation: scrolling 45s infinite
 }
 
+.grow--down-effect-after {
+  ::after {
+    animation: grow-down 3s linear forwards
+  }
+}
+
 .justify {
   text-align: justify;
 }
 
+@keyframes grow-down {
+  to { height: 100%; }
+}
+
 @keyframes fade-in {
-  to { opacity: 1; }
+  to { 
+    opacity: 1;
+    transform: translateY(-1rem)
+  }
 }
 
 @keyframes scrolling {
