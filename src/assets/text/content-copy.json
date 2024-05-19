@@ -1,10 +1,31 @@
 {
     "content": {
         "header": {
-            "about": "About",
-            "projects": "Projects",
-            "experience": "Experience",
-            "contact": "Contact"
+            "home": {
+                "title": "Home",
+                "icon": "home",
+                "targetElement": "home"
+            },
+            "about": {
+                "title": "About",
+                "icon": "info",
+                "targetElement": "about"
+            },
+            "projects": {
+                "title": "Projects",
+                "icon": "work",
+                "targetElement": "projects"
+            },
+            "experience": {
+                "title": "Experience",
+                "icon": "grade",
+                "targetElement": "experience"
+            },
+            "contact": {
+                "title": "Contact",
+                "icon": "phone_iphone",
+                "targetElement": "contact"
+            }
         },
         "cover": {
             "myNameIs": "My name is",
@@ -27,15 +48,17 @@
                 "timeFrame": "August 2017 - October 2018",
                 "screenshot": "../../../../assets/images/projects/cuponcity.PNG",
                 "location": "[Quito Ecuador]",
-                "hoverTextColor": "dark-text"
+                "hoverTextColor": "dark-text",
+                "url": "https://web.archive.org/web/20170610231938/http://cuponcity.ec/"
             },
             "catManga": {
                 "name": "Cat Manga",
                 "clientName": "Black Cat",
                 "timeFrame": "April 2020 - June 2021",
-                "screenshot": "../../../../assets/images/projects/catmanga.PNG",
+                "screenshot": "../../../../assets/images/projects/cat-manga.PNG",
                 "location": "[Remote]",
-                "hoverTextColor": "light-text"
+                "hoverTextColor": "light-text",
+                "url":"https://web.archive.org/web/20210628041301/https://catmanga.org/"
             },
             "chemquestApp": {
                 "name": "Chemquest APP",
@@ -43,15 +66,17 @@
                 "timeFrame": "June 2020 - December 2021",
                 "screenshot": "../../../../assets/images/projects/chemquest.PNG",
                 "location": "[Fairfield CT]",
-                "hoverTextColor": "dark-text"
+                "hoverTextColor": "dark-text",
+                "url": "https://apps.apple.com/us/app/chemquest/id1519862519"
             },
             "spectrumWeb": {
-                "name": "Spectrum NET",
+                "name": "Spectrum NET - Appointments",
                 "clientName": "Charter Communications",
                 "timeFrame": "May 2022 - Present",
-                "screenshot": "../../../../assets/images/projects/spectrum.PNG",
+                "screenshot": "../../../../assets/images/projects/spectrum-appointments.PNG",
                 "location": "[Quito Ecuador]",
-                "hoverTextColor": "dark-text"
+                "hoverTextColor": "dark-text",
+                "url": "https://www.spectrum.net/track-appts/1234-1234"
             }
         },
         "experience": {
@@ -82,7 +107,25 @@
             }
         },
         "contact": {
-
+            "header": "Contact",
+            "body": "Thanks for reading! for any business inquiries please feel free to reach out to me through the following links:",
+            "contactMediums": {
+                "github": {
+                    "name": "Source Code",
+                    "subtitle": "<a href='https://github.com/Yoshua-Carrera/netlify-portfolio' target='_blank' rel=''>github.com/Yoshua-Carrera/netlify-portfolio</a>",
+                    "img": "../../../assets/images/contact-mediums/github-logo.svg"
+                },
+                "email": {
+                    "name": "Email",
+                    "subtitle": "<a href='mailto:yoshua.carrera24@gmail.com'>yoshua.carrera24@gmail.com</a>",
+                    "img": "../../../assets/images/contact-mediums/gmail-logo.svg"
+                },
+                "phoneNumber": {
+                    "name": "Phone Number",
+                    "subtitle": "<a href='tel:2032148763'>(203)-214-8763</a>",
+                    "img": "../../../assets/images/contact-mediums/phone-logo.svg"
+                }
+            }
         }
     }
 }

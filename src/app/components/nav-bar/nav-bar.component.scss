@@ -1,5 +1,9 @@
 @import "../../../styles.scss";
 
+* {
+  box-sizing: border-box;
+}
+
 .global-navigation,
 .content-links {
   display: flex;
@@ -22,11 +26,26 @@
   align-items: center;
 }
 
+.glow {
+  border-bottom: 0.25rem solid transparent;
+  &.active {
+    border-bottom: 0.25rem solid $main-indigo;    
+  }
+}
+
 .glow:hover {
   text-shadow: 0 0 $blur $glow;
   mat-icon {
     text-shadow: none;
   }
+}
+
+.glow:active {
+  border-bottom: 0.25rem solid $main-indigo;
+}
+
+.glow:focus {
+  border-bottom: 0.25rem solid $main-indigo;
 }
 
 mat-icon {

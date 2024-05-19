@@ -27,7 +27,7 @@ mat-card-title {
 
 @media (min-width: 300px) {
     .grid-container {
-        padding: 0.25rem;
+        padding: 1rem;
     }
     .justify {
         text-align: left;
@@ -36,7 +36,7 @@ mat-card-title {
 
 @media (min-width: 475px) {
     .grid-container {
-        padding: 1rem;
+        padding: 1.25rem;
     }
     .justify {
         text-align: left;
@@ -45,7 +45,7 @@ mat-card-title {
 
 @media (min-width: 600px) {
     .grid-container {
-        padding: 2rem;
+        padding: 1.5rem;
     }
     .justify {
         text-align: justify;
@@ -54,7 +54,7 @@ mat-card-title {
 
 @media (min-width: 800px) {
     .grid-container {
-        padding: 3rem;
+        padding: 2rem;
     }
     .justify {
         text-align: justify;

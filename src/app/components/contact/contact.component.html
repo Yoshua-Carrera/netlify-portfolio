@@ -1,3 +1,15 @@
-<div class="full-height-container dark--grey contact-container" *ngIf="{ dialogueState: dialogueState$ | async } as variables">
-{{ variables.dialogueState?.dialogueType }}
+<div class="full-height-container space--grey">
+    <header class="mat-headline-2 watch--underline">{{ contactCopy.header }}</header>
+    <div class="main-body justify">
+        <p class="mat-headline-4 watch--fade--in faded top-text" [innerHTML]="contactCopy.body| safeHtml"></p>
+    </div>
+    <mat-list class="contact-mediums">
+        @for (medium of mediums; track medium) {
+          <mat-list-item>
+            <mat-icon matListItemIcon><img [src]="medium.img"></mat-icon>
+            <div matListItemTitle [innerHTML]="medium.name | safeHtml"></div>
+            <div matListItemLine [innerHTML]="medium.subtitle | safeHtml"></div>
+          </mat-list-item>
+        }
+      </mat-list>
 </div>

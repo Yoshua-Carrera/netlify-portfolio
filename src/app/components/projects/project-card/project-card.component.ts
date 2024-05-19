@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CardHoverState } from '@core-models/projects.model';
 import { ProjectDetails, ProjectsCopy } from '@core-models/static-copy.model';
 
@@ -20,12 +21,9 @@ export class ProjectCardComponent implements OnInit {
   }
 
   cardHover(entered: boolean, cardId: string) {
-    console.log('cardHover', entered);
     this.hoverState.id = entered ? cardId : null;
     this.hoverState.isHovered = entered;
   }
 
-  openDialogue() {
-    console.log('hi');
-  }
+  constructor(private router: Router) {}
 }

@@ -1,11 +1,26 @@
+import { ContactMedium } from "./contact.model";
+import { MainContainerIds } from "./navigation.model";
+
 export interface ContentCopy {
     header: headerCopy;
     cover: CoverCopy;
     aboutMe: AboutMeCopy;
     projects: ProjectsCopy;
     experience: ExperienceCopy;
-    contact: any;
+    contact: ContactCopy;
 }
+
+export interface ContactCopy {
+    header: string;
+    body: string;
+    contactMediums: ContactMediumCopy;
+}
+
+export interface ContactMediumCopy {
+    github: ContactMedium;
+    email: ContactMedium;
+    phoneNumber: ContactMedium;
+} 
 
 export interface ProjectsCopy {
     header: string;
@@ -23,13 +38,21 @@ export interface ProjectDetails {
     timeFrame: string;
     screenshot: string;
     location: string;
+    url: string;
 }
 
 export interface headerCopy {
-    about: string;
-    projects: string;
-    experience: string;
-    contact: string;
+    home: HeaderNavigationData;
+    about: HeaderNavigationData;
+    projects: HeaderNavigationData;
+    experience: HeaderNavigationData;
+    contact: HeaderNavigationData;
+}
+
+export interface HeaderNavigationData {
+    title: string;
+    icon: string;
+    targetElement: MainContainerIds | string;
 }
 
 export interface CoverCopy {

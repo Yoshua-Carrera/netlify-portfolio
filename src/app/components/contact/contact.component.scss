@@ -1,1 +1,33 @@
-@import '../../../styles.scss';
+@import "../../../styles.scss";
+
+p {
+  padding: 1rem 2.5rem;
+}
+
+mat-icon {
+  height: fit-content !important;
+  width: fit-content !important;
+  margin-left: 0;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  width: 75%;
+}
+
+mat-list-item::before {
+  content: "";
+  height: 0;
+  opacity: 0;
+  background-color: white;
+  width: 0.25rem;
+  transition: all 0.25s ease-out;
+}
+
+mat-list-item:hover:before {
+  height: 100%;
+  background-color: white;
+  opacity: 1;
+}

@@ -12,7 +12,9 @@
     <mat-card-subtitle>{{ projectConfig.timeFrame }}</mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
-    <img [src]="projectConfig.screenshot" [alt]="projectConfig.name" />
+    <a [href]="projectConfig.url" target="_blank">
+      <img [src]="projectConfig.screenshot" [alt]="projectConfig.name" />
+    </a>
     <div class="hover-text">
       <h1 [class]="projectConfig.hoverTextColor">{{ projectsCopy.seeMore }}</h1>
     </div>
