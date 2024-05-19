@@ -1,0 +1,50 @@
+<div class="mainContainer">
+  <h3 class="mainTitle">Brief Introduction to my skillset</h3>
+  <br /><br />
+  <hr />
+  <br /><br />
+  <div class="middleContainer">
+    <div class="skillContainer">
+      <div class="skillDetail">
+        <mat-icon>flash_on</mat-icon>
+        <h3>Fast Learner</h3>
+      </div>
+      <div class="skillDetail">
+        <mat-icon>battery_charging_full</mat-icon>
+        <h3>Highly Motivated</h3>
+      </div>
+      <div class="skillDetail">
+        <mat-icon>groups</mat-icon>
+        <h3>Team Player</h3>
+      </div>
+      <div class="skillDetail">
+        <mat-icon>psychology</mat-icon>
+        <h3>Logical Thinker</h3>
+      </div>
+      <div class="skillDetail">
+        <mat-icon>connect_without_contact</mat-icon>
+        <h3>Communicative</h3>
+      </div>
+    </div>
+    <!-- // -->
+    <mat-accordion>
+      <h3 [ngStyle]="{ 'font-size': '2.5rem' }">Skillsets</h3>
+      <br />
+      <mat-expansion-panel
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false"
+        *ngFor="let skillSet of skillSetData"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>{{ skillSet.title }}</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <br />
+        <h3 *ngFor="let skill of skillSet.values">
+          <mat-icon class="bulletPoint">bolt</mat-icon> {{ skill }}
+        </h3>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</div>
