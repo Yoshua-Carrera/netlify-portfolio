@@ -20,6 +20,7 @@ export interface ContactMediumCopy {
     github: ContactMedium;
     email: ContactMedium;
     phoneNumber: ContactMedium;
+    linkedin: ContactMedium;
 } 
 
 export interface ProjectsCopy {
