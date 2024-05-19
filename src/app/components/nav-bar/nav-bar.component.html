@@ -1,0 +1,14 @@
+<div class="global-navigation dark">
+  <div class="sidenav mobile" (click)="onNavBarClicked($event)"><mat-icon [fontIcon]="materialIcons.MENU"></mat-icon></div>
+  <div class="content-links dark desktop">
+    @for (link of headerLinks; track link) {
+      <p class="mat-h1 glow {{ link.targetElement }}" (click)="onNavBarLinkClicked(link.targetElement)">
+        <mat-icon [fontIcon]="link.icon"></mat-icon>
+        <span class="nav-text">{{ link.title }}</span>
+      </p>  
+    }
+  </div>
+  <div class="dark-mode-toggle dark">
+    <mat-slide-toggle class="dark"></mat-slide-toggle>
+  </div>
+</div>

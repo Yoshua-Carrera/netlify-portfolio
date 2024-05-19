@@ -1,0 +1,51 @@
+@import "../../../../styles.scss";
+
+mat-card {
+  margin: 1em;
+}
+
+img {
+  width: 100%;
+}
+
+mat-card-content {
+  position: relative;
+  padding: 0.25rem;
+  padding-bottom: 0.25rem !important;
+}
+
+mat-card-header {
+  padding-left: 0.5rem;
+}
+
+mat-card:hover {
+  img {
+    filter: blur(0.2rem);
+  }
+  .hover-text {
+    opacity: 1;
+  }
+  h1 {
+    &.dark-text {
+      border-bottom: 1px black solid;
+      color: black;
+    }
+    &.light-text {
+      border-bottom: 1px white solid;
+      color: white;
+    }
+  }
+}
+
+.hover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity ease-out 250ms;
+  h1 {
+    font-weight: 900;
+    border-bottom: 2px white solid;
+  }
+}

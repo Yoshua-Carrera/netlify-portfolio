@@ -1,0 +1,62 @@
+@import '../../../styles.scss';
+
+.timeline-middle-construct {
+    background-color: $main-indigo;
+    height: 100%;
+    width: 0.5rem;
+}
+
+.grid-content, .timeline-shape {
+    height: 100%;
+    mat-icon {
+        color: $main-pink;
+        padding-bottom: 2rem;
+    }
+}
+
+.timeline-shape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+mat-card-title {
+    margin-bottom: 0.5rem;
+}
+
+@media (min-width: 300px) {
+    .grid-container {
+        padding: 1rem;
+    }
+    .justify {
+        text-align: left;
+    }
+}
+
+@media (min-width: 475px) {
+    .grid-container {
+        padding: 1.25rem;
+    }
+    .justify {
+        text-align: left;
+    }
+}
+
+@media (min-width: 600px) {
+    .grid-container {
+        padding: 1.5rem;
+    }
+    .justify {
+        text-align: justify;
+    }
+}
+
+@media (min-width: 800px) {
+    .grid-container {
+        padding: 2rem;
+    }
+    .justify {
+        text-align: justify;
+    }
+}

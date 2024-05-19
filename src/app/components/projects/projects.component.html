@@ -1,0 +1,20 @@
+<div class="full-height-container dark--grey">
+  <header class="mat-headline-2 watch--underline">
+    {{ projectsCopy.header }}
+  </header>
+  <div class="chips-container" *ngIf="false">
+    @for (chip of availableColors; track chip) {
+    <mat-chip-option
+      [color]="chip.color"
+      [selected]="chip.id === availableColors[0]?.id"
+      (selectionChange)="onSelection(chip, $event)"
+      >{{ chip.name }}</mat-chip-option
+    >
+    }
+  </div>
+  <div class="project-card-container">
+    @for (projectConfig of projectConfigs; track $index) {
+        <project-card [projectConfig]="projectConfig" [projectsCopy]="projectsCopy"></project-card>
+    }
+  </div>
+</div>

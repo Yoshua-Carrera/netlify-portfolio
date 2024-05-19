@@ -1,67 +1,62 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatListModule } from '@angular/material/list';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { ProjectsComponent } from './projects/projects.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatListModule } from '@angular/material/list';
-import { MatIconModule } from '@angular/material/icon';
-import { SidenavComponent } from './sidenav/sidenav.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CoverComponent } from './cover/cover.component';
-import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
-import { MatTreeModule } from '@angular/material/tree';
-import { MatExpansionModule } from '@angular/material/expansion';
-import { MatChipsModule } from '@angular/material/chips';
-import { MatButtonToggleModule } from '@angular/material/button-toggle';
-import { ProjectCardsComponent } from './projects/project-cards/project-cards.component';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
-import { MatDialogModule } from '@angular/material/dialog';
-import { DialogComponent } from './dialog/dialog.component';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatSelectModule } from '@angular/material/select';
-import { ReactiveFormsModule } from '@angular/forms';
+import { MatChipsModule } from '@angular/material/chips';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+
+import { SafeHtmlPipe } from './pipes/safe-html.pipe';
+import { NavBarComponent } from '@core-components/nav-bar/nav-bar.component';
+import { GenericDialogueComponent } from '@core-components/generic-dialogue/generic-dialogue.component';
+import { HomePageComponent } from '@core-components/home-page/home-page.component';
+import { AboutMeComponent } from '@core-components/about-me/about-me.component';
+import { ProjectsComponent } from '@core-components/projects/projects.component';
+import { ExperienceComponent } from '@core-components/experience/experience.component';
+import { ContactComponent } from '@core-components/contact/contact.component';
+import { ProjectCardComponent } from './components/projects/project-card/project-card.component';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { NetlifyStoreModule } from '@core-store/netlify-store.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     NavBarComponent,
+    GenericDialogueComponent,
+    HomePageComponent,
+    AboutMeComponent,
     ProjectsComponent,
-    SidenavComponent,
-    CoverComponent,
-    AboutComponent,
+    ExperienceComponent,
     ContactComponent,
-    ProjectCardsComponent,
-    DialogComponent,
+    SafeHtmlPipe,
+    ProjectCardComponent,
   ],
-  entryComponents: [DialogComponent],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgbModule,
+    NetlifyStoreModule,
+    MatListModule,
+    MatChipsModule,
+    MatCardModule,
+    MatGridListModule,
+    MatListModule,
+    MatDividerModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule,
+    MatSlideToggleModule,
     BrowserModule,
-    BrowserAnimationsModule,
-    MatTreeModule,
-    MatExpansionModule,
-    MatChipsModule,
-    MatButtonToggleModule,
-    MatCardModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    ReactiveFormsModule,
-    MatSelectModule,
+    AppRoutingModule,
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
   ],
-  providers: [],
+  providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

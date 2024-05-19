@@ -1,0 +1,131 @@
+{
+    "content": {
+        "header": {
+            "home": {
+                "title": "Home",
+                "icon": "home",
+                "targetElement": "home"
+            },
+            "about": {
+                "title": "About",
+                "icon": "info",
+                "targetElement": "about"
+            },
+            "projects": {
+                "title": "Projects",
+                "icon": "work",
+                "targetElement": "projects"
+            },
+            "experience": {
+                "title": "Experience",
+                "icon": "grade",
+                "targetElement": "experience"
+            },
+            "contact": {
+                "title": "Contact",
+                "icon": "phone_iphone",
+                "targetElement": "contact"
+            }
+        },
+        "cover": {
+            "myNameIs": "My name is",
+            "name": "Yoshua",
+            "hereIsMyWork": "Here is my work",
+            "buttonText": "Dive in"
+        },
+        "aboutMe": {
+            "header": "About Me",
+            "mainBody": "Experienced Developer with over 5 years of experience. <strong class='bottom-border'>strongly</strong> motivated by curiosity and want for <strong class='bottom-border'>mastery</strong>. <br> Currently working full time as a Senior Software Engineer for <strong class='bottom-border'><a href='https://www.spectrum.com/' class='simple-link' target='_blank'>Charter Communications</a></strong>.",
+            "subBody": "Data enthusiast who is driven by results, previously graduated with a M.S in Applied Data Science. <br> Former Data scientist (2018), which shaped many of the approaches I take as a software engineer today.",
+            "portrait": "../../../assets/images/portrait.jpg"
+        },
+        "projects": {
+            "header": "Latest Projects",
+            "seeMore": "See More",
+            "cuponcity": {
+                "name": "Cuponcity ECU",
+                "clientName": "Cuponcity",
+                "timeFrame": "August 2017 - October 2018",
+                "screenshot": "../../../../assets/images/projects/cuponcity.PNG",
+                "location": "[Quito Ecuador]",
+                "hoverTextColor": "dark-text",
+                "url": "https://web.archive.org/web/20170610231938/http://cuponcity.ec/"
+            },
+            "catManga": {
+                "name": "Cat Manga",
+                "clientName": "Black Cat",
+                "timeFrame": "April 2020 - June 2021",
+                "screenshot": "../../../../assets/images/projects/cat-manga.PNG",
+                "location": "[Remote]",
+                "hoverTextColor": "light-text",
+                "url":"https://web.archive.org/web/20210628041301/https://catmanga.org/"
+            },
+            "chemquestApp": {
+                "name": "Chemquest APP",
+                "clientName": "Fairfield University",
+                "timeFrame": "June 2020 - December 2021",
+                "screenshot": "../../../../assets/images/projects/chemquest.PNG",
+                "location": "[Fairfield CT]",
+                "hoverTextColor": "dark-text",
+                "url": "https://apps.apple.com/us/app/chemquest/id1519862519"
+            },
+            "spectrumWeb": {
+                "name": "Spectrum NET - Appointments",
+                "clientName": "Charter Communications",
+                "timeFrame": "May 2022 - Present",
+                "screenshot": "../../../../assets/images/projects/spectrum-appointments.PNG",
+                "location": "[Quito Ecuador]",
+                "hoverTextColor": "dark-text",
+                "url": "https://www.spectrum.net/track-appts/1234-1234"
+            }
+        },
+        "experience": {
+            "header": "Experience",
+            "sicobra": {
+                "company": "<strong class='bottom-border'><a href='https://www.banco-solidario.com/' class='simple-link' target='_blank'>Sicobra (Banco Solidario)</a></strong>",
+                "position": "Jr. Data Scientist",
+                "dates": "2017 - 2018 @ [Quito, Ecuador]",
+                "description": "Sicobra is the loan collecting branch of the third biggest bank in the country. Worked as part of the predictive modeling unit. Developed a variant of the Montecarlo algorithm to apply a credit score for defaulting users with a 96% accuracy."   
+            },
+            "cuponCity": {
+                "company": "<strong class='bottom-border'><a href='https://web.archive.org/web/20170610231938/http://cuponcity.ec/' class='simple-link' target='_blank'>Cuponcity Ec</a></strong>",
+                "position": "Jr Angular developer",
+                "dates": "2018 - 2019 @ [Quito, Ecuador]",
+                "description": "Cuponcity was an E-commerce company that offered coupons and cashback to users. Participated as an entry level junior developer, member of the FE team in charge of account settings and buy flow."   
+            },
+            "fairfieldUniversity": {
+                "company": "<strong class='bottom-border'><a href='https://www.fairfield.edu/' class='simple-link' target='_blank'>Fairfield University</a></strong>",
+                "position": "Ionic/Angular Developer",
+                "dates": "2020 - 2022 [Fairfield CT]",
+                "description": "Fairfield University funded the project <span class='bottom-border'><a href='https://apps.apple.com/us/app/chemquest/id1519862519' class='simple-link' target='_blank'>Chemquest App</a></span> which aimed to build a chemistry companion app that could be used as a tool for studying. It also allows users to hand-sketch chemical compounds and it will attempt to predict the isomer using SMILES notation. It integrates with PubMed"   
+            },
+            "charterCommunications": {
+                "company": "<strong class='bottom-border'><a href='https://www.spectrum.net/' class='simple-link' target='_blank'>Charter Communications</a></strong>",
+                "position": "Senior Developer",
+                "dates": "2022 - present [Denver, CO (remote)]",
+                "description": "Charter is one of the biggest telcom companies in the USA, It serves 32 million users in 41 states. Lead developer of 3 features (as of may 2024). Main lead of Service Appointments which on average has served 104K users with a <strong class = 'bottom-border'>98.16%</strong> success rate on its flows."   
+            }
+        },
+        "contact": {
+            "header": "Contact",
+            "body": "Thanks for reading! for any business inquiries please feel free to reach out to me through the following links:",
+            "contactMediums": {
+                "github": {
+                    "name": "Source Code",
+                    "subtitle": "<a href='https://github.com/Yoshua-Carrera/netlify-portfolio' target='_blank' rel=''>github.com/Yoshua-Carrera/netlify-portfolio</a>",
+                    "img": "../../../assets/images/contact-mediums/github-logo.svg"
+                },
+                "email": {
+                    "name": "Email",
+                    "subtitle": "<a href='mailto:yoshua.carrera24@gmail.com'>yoshua.carrera24@gmail.com</a>",
+                    "img": "../../../assets/images/contact-mediums/gmail-logo.svg"
+                },
+                "phoneNumber": {
+                    "name": "Phone Number",
+                    "subtitle": "<a href='tel:2032148763'>(203)-214-8763</a>",
+                    "img": "../../../assets/images/contact-mediums/phone-logo.svg"
+                }
+            }
+        }
+    }
+}

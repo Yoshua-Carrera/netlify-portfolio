@@ -1,0 +1,16 @@
+<div class="main-container">
+  <section class="cover">
+    <div class="text-content">
+      <h1>{{ coverCopy.myNameIs }} <span>{{ coverCopy.name }}</span> <br>{{ coverCopy.hereIsMyWork }}</h1>
+    </div>
+    <button
+      (mouseenter)="buttonHover(buttonHoverActions.ENTER)"
+      (mouseleave)="buttonHover(buttonHoverActions.LEAVE)"
+      (click)="navigateDown(MainContainerIds.ABOUT)"
+    >
+      {{ coverCopy.buttonText }}
+      <mat-icon>{{ buttonIcon }}</mat-icon>
+    </button>
+    <div class="wave--spacer wave--bottom--layer"></div>
+  </section>
+</div>

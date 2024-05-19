@@ -1,0 +1,17 @@
+<div class="full-height-container dark--grey">
+    <header class="mat-headline-2 watch--underline">{{ aboutMeCopy.header }}</header>
+    <div class="main-body justify">
+        <p class="mat-headline-4 watch--fade--in faded top-text" [innerHTML]="aboutMeCopy.mainBody | safeHtml"></p>
+        <img [src]="aboutMeCopy.portrait" class="portrait watch--fade--in faded">
+    </div>
+    <div class="sub-body justify">
+        <p class="mat-headline-4 watch--fade--in faded" [innerHTML]="aboutMeCopy.subBody| safeHtml"></p>
+    </div>
+    <div class="carousel">
+        <div class="carousel-moving-container scroll--effect bottom-text">
+            <div class="carousel-item" *ngFor="let keyword of carouselContent; index as i">
+                {{ keyword }}
+            </div>    
+        </div>
+    </div>
+</div>

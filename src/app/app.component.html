@@ -1,17 +1,32 @@
-<!-- <html> -->
-  <div class="cover">
-    <app-cover (navigateToggle)="navigateDown()"></app-cover>
-  </div>
-  <div id="mainContainer" class="mainContainer">
-    <app-nav-bar (sidenavToggle)="snav.toggle()"  (navigateToggle)="navigateDown()"></app-nav-bar>
-    <mat-sidenav-container>
-      
-      <mat-sidenav #snav mode="push" fixedInViewport="true">
-        <app-sidenav></app-sidenav>
-      </mat-sidenav>
-      <mat-sidenav-content>
-        <router-outlet></router-outlet>
-      </mat-sidenav-content>
-    </mat-sidenav-container>
-  </div>
-<!-- </html> -->
+<mat-sidenav-container class="side-nav">
+  <mat-sidenav
+    #sidenav
+    mode="push"
+    (opened)="onSideNavOpen($event)"
+    (closed)="onSideNavClose($event)"
+    [opened]="sideMenuOpen"
+  >
+    <mat-list>
+      @for (link of headerLinks; track link) {
+        <mat-list-item (click)="onNavigateDown(link.targetElement)">{{ link.title }}</mat-list-item>
+        <mat-divider></mat-divider>  
+      }
+    </mat-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="no-scroll-x">
+    <nav-bar class="dark" (navBarClicked)="sidenav.toggle()" (navBarLinkClicked)="onNavigateDown($event)"></nav-bar>
+    <home-page
+      id="home"
+      class="dark"
+      (navigateToggle)="onNavigateDown($event)"
+    ></home-page>
+    <about-me id="about" class="about parent--container" #about></about-me>
+    <div class="wave--spacer wave--bottom--alt--layer xs dark--grey"></div>
+    <experience id="experience" class="skillset parent--container" #experience></experience>
+    <div class="wave--spacer wave--bottom--alt--layer xs dark--grey"></div>
+    <projects id="projects" class="projects parent--container" #projects></projects>
+    <div class="wave--spacer wave--bottom--alt--layer xs dark--grey"></div>
+    <contact id="contact" class="contact parent--container" #contact></contact>
+    <div class="wave--spacer wave--bottom--layer xs transparent"></div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
