@@ -21,6 +21,8 @@ export interface ContactMediumCopy {
     email: ContactMedium;
     phoneNumber: ContactMedium;
     linkedin: ContactMedium;
+    resume: ContactMedium;
+
 } 
 
 export interface ProjectsCopy {
