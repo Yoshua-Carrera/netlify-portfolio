@@ -30,3 +30,27 @@
 project-card {
   max-width: 25rem;
 }
+
+@media (min-width: 800px) {
+  .sm--text {
+    font-size: 6rem;
+  }  
+}
+
+@media (min-width: 500px) {
+  .sm--text {
+    font-size: 4rem;
+  }  
+}
+
+@media (min-width: 500px) {
+  .sm--text {
+    font-size: 3rem;
+  }  
+}
+
+@media (min-width: 300px) {
+  .sm--text {
+    font-size: 2.5rem;
+  }  
+}
