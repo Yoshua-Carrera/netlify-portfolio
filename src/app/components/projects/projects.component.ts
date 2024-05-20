@@ -20,10 +20,10 @@ export class ProjectsComponent implements OnInit {
     ];
     this.projectsCopy = this.staticCopyService.getJsonCopy().projects
     this.projectConfigs = [
-      this.projectsCopy.catManga,
-      this.projectsCopy.chemquestApp,
-      this.projectsCopy.cuponcity,
       this.projectsCopy.spectrumWeb,
+      this.projectsCopy.chemquestApp,
+      this.projectsCopy.catManga,
+      this.projectsCopy.cuponcity,
     ]
   }
 

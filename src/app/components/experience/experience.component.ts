@@ -34,10 +34,10 @@ export class ExperienceComponent implements OnInit, AfterViewInit {
     this.experienceCopy = this.staticCopyService.getJsonCopy().experience;
     this.tiles = this.timelineGridService.buildGridConfig(
       [
+        ExperienceCompanies.CHARTER_COMMUNICATIONS,
+        ExperienceCompanies.FAIRFIELD_UNIVERSITY,
         ExperienceCompanies.SICOBRA,
         ExperienceCompanies.CUPON_CITY,
-        ExperienceCompanies.FAIRFIELD_UNIVERSITY,
-        ExperienceCompanies.CHARTER_COMMUNICATIONS,
       ],
       'transparent',
       'radio_button_checked',

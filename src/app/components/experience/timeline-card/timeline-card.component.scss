@@ -30,13 +30,18 @@
   width: 4rem;
   border-radius: 50%;
   &.right-message {
-    left: -5.5rem;
+    left: -6rem;
     top: 0.65rem;
   };
   &.left-message {
-    right: -5.5rem;
+    right: -6rem;
     top: 0.65rem;
   }
+}
+
+.thumbnail:hover {
+  outline: 0.15rem dashed $hover-purple;
+  outline-offset: 0.25rem;
 }
 
 @media (max-width: 600px) {

@@ -8,7 +8,9 @@
       <p [innerHTML]="experienceCopy[tile.company]?.position | safeHtml" class="mat-h3 justify"></p>
       <p [innerHTML]="experienceCopy[tile.company]?.description | safeHtml" class="mat-h4 justify"></p>
     </mat-card-content>
-    <img [src]="experienceCopy[tile.company]?.thumbnail" class="thumbnail {{ tile.className }}" >
+    <a [href]="experienceCopy[tile.company]?.url" target="_blank">
+      <img [src]="experienceCopy[tile.company]?.thumbnail" class="thumbnail {{ tile.className }}" >
+    </a>
     <div class="arrow {{ tile.className }}"></div>
   </mat-card>
 </div>
