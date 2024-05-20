@@ -35,7 +35,7 @@
         },
         "aboutMe": {
             "header": "About Me",
-            "mainBody": "Experienced Developer with over 5 years of experience. <strong>strongly</strong> motivated by curiosity and want for <strong>mastery</strong>. <br> Currently working full time as a Senior Software Engineer for <strong class='bottom-border'><a href='https://www.spectrum.com/' class='simple-link' target='_blank'>Charter Communications</a></strong>.",
+            "mainBody": "Experienced Developer with over 5 years of experience. <strong>Strongly</strong> motivated by curiosity and want for <strong>mastery</strong>. <br> Currently working full time as a Senior Software Engineer for <strong class='bottom-border'><a href='https://www.spectrum.com/' class='simple-link' target='_blank'>Charter Communications</a></strong>.",
             "subBody": "Data enthusiast who is driven by results, previously graduated with a M.S in Applied Data Science. <br> Former Data scientist (2018), which shaped many of the approaches I take as a software engineer today.",
             "portrait": "../../../assets/images/portrait.jpg"
         },
