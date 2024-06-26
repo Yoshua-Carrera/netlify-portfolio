@@ -18,6 +18,7 @@ export enum GridTimelineClass {
 export enum ExperienceCompanies {
   SICOBRA='sicobra',
   CUPON_CITY='cuponCity',
+  CRITERION='criterion',
   FAIRFIELD_UNIVERSITY='fairfieldUniversity',
   CHARTER_COMMUNICATIONS='charterCommunications',
 }

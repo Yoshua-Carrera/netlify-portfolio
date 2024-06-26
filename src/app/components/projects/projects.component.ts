@@ -23,6 +23,7 @@ export class ProjectsComponent implements OnInit {
       this.projectsCopy.spectrumWeb,
       this.projectsCopy.chemquestApp,
       this.projectsCopy.catManga,
+      this.projectsCopy.criterion,
       this.projectsCopy.cuponcity,
     ]
   }

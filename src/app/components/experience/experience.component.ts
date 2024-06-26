@@ -37,6 +37,7 @@ export class ExperienceComponent implements OnInit, AfterViewInit {
         ExperienceCompanies.CHARTER_COMMUNICATIONS,
         ExperienceCompanies.FAIRFIELD_UNIVERSITY,
         ExperienceCompanies.SICOBRA,
+        ExperienceCompanies.CRITERION,
         ExperienceCompanies.CUPON_CITY,
       ],
       'transparent',

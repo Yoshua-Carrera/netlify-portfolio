@@ -45,7 +45,7 @@
             "cuponcity": {
                 "name": "Cuponcity ECU",
                 "clientName": "Cuponcity",
-                "timeFrame": "August 2017 - October 2018",
+                "timeFrame": "March 2017 - October 2018",
                 "screenshot": "../../../../assets/images/projects/cuponcity.PNG",
                 "location": "[Quito Ecuador]",
                 "hoverTextColor": "dark-text",
@@ -69,13 +69,22 @@
                 "hoverTextColor": "dark-text",
                 "url": "https://apps.apple.com/us/app/chemquest/id1519862519"
             },
+            "criterion": {
+                "name": "Criterion",
+                "clientName": "Criterion HCM",
+                "timeFrame": "December 2021 - May 2022",
+                "screenshot": "../../../../assets/images/projects/criterion.PNG",
+                "location": "[Nowarlk CT]",
+                "hoverTextColor": "dark-text",
+                "url": "https://www.criterionhcm.com/"
+            },
             "spectrumWeb": {
                 "name": "Spectrum NET - Appointments",
                 "clientName": "Charter Communications",
                 "timeFrame": "May 2022 - Present",
                 "screenshot": "../../../../assets/images/projects/spectrum-appointments.PNG",
                 "location": "[Denver Colorado]",
-                "hoverTextColor": "dark-text",
+                "hoverTextColor": "light-text",
                 "url": "https://www.spectrum.net/track-appts/1234-1234"
             }
         },
@@ -104,6 +113,14 @@
                 "description": "Fairfield University funded the project <span class='bottom-border'><a href='https://apps.apple.com/us/app/chemquest/id1519862519' class='simple-link' target='_blank'>Chemquest App</a></span> which aimed to build a chemistry companion app that could be used as a tool for studying. It also allows users to hand-sketch chemical compounds and it will attempt to predict the isomer using SMILES notation. It integrates with PubMed",
                 "thumbnail": "../../../../assets/images/experience/fairfield.png",
                 "url": "https://apps.apple.com/us/app/chemquest/id1519862519"
+            },
+            "criterion": {
+                "company": "<strong class='bottom-border'><a href='https://www.criterionhcm.com/' class='simple-link' target='_blank'>Criterion HCM</a></strong>",
+                "position": "Software Developer",
+                "dates": "2021 - 2022 @ [Norwalk, CT]",
+                "description": "Criterion owns five main service branches focused to provide an all-in-one solution through automation and control software tools. Franchise is a branch of solution that offers different means of improving day to day operations, from automating payrolls, to optimizing the employee recruitment process.",
+                "thumbnail": "../../../../assets/images/experience/criterion-logo.png",
+                "url": "https://www.criterionhcm.com/"   
             },
             "charterCommunications": {
                 "company": "<strong class='bottom-border'><a href='https://www.spectrum.net/' class='simple-link' target='_blank'>Charter Communications</a></strong>",

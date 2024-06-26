@@ -10,7 +10,7 @@ import { techStack } from 'app/models/keyword-seo.model';
 })
 export class AboutMeComponent implements OnInit {
   aboutMeCopy: AboutMeCopy
-  carouselContent: string[] = [techStack, techStack].flatMap((item) => [item, item, item, item, item]).flat()
+  carouselContent: string[] = [techStack, techStack, techStack, techStack].flatMap((item) => [item, item, item, item, item]).flat()
 
   ngOnInit(): void {
     this.aboutMeCopy = this.staticCopyService.getJsonCopy().aboutMe
