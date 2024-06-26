@@ -44,6 +44,13 @@
   outline-offset: 0.25rem;
 }
 
+
+.timeline-card {
+  opacity: 0;
+  transform: translateY(2rem)
+}
+
+
 @media (max-width: 600px) {
   .arrow {
     &.right-message,
