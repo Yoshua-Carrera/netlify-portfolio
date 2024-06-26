@@ -152,7 +152,7 @@ $light-theme: mat.define-light-theme((
   left: 0;
   bottom: 0;
   background-color: $main-indigo;
-  animation: underline-growth 1s linear forwards;
+  animation: underline-growth 1.5s linear forwards;
 }
 
 .undeline--effect.pink--accent::before {
@@ -177,16 +177,16 @@ $light-theme: mat.define-light-theme((
 
 .fade--in-effect {
   opacity: 0;
-  animation: fade-in 1.75s linear forwards;
+  animation: fade-in 2.5s linear forwards;
 }
 
 .scroll--effect {
-  animation: scrolling 45s infinite
+  animation: scrolling 40s infinite
 }
 
 .grow--down-effect-after {
   ::after {
-    animation: grow-down 3.5s linear forwards
+    animation: grow-down 4s linear forwards
   }
 }
 
