@@ -35,9 +35,9 @@ export class ExperienceComponent implements OnInit, AfterViewInit {
     this.tiles = this.timelineGridService.buildGridConfig(
       [
         ExperienceCompanies.CHARTER_COMMUNICATIONS,
+        ExperienceCompanies.CRITERION,
         ExperienceCompanies.FAIRFIELD_UNIVERSITY,
         ExperienceCompanies.SICOBRA,
-        ExperienceCompanies.CRITERION,
         ExperienceCompanies.CUPON_CITY,
       ],
       'transparent',
