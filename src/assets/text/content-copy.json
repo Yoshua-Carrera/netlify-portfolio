@@ -109,7 +109,7 @@
             "fairfieldUniversity": {
                 "company": "<strong class='bottom-border'><a href='https://www.fairfield.edu/' class='simple-link' target='_blank'>Fairfield University</a></strong>",
                 "position": "Ionic/Angular Developer",
-                "dates": "2020 - 2022 [Fairfield CT]",
+                "dates": "2020 - 2022 @ [Fairfield CT]",
                 "description": "Fairfield University funded the project <span class='bottom-border'><a href='https://apps.apple.com/us/app/chemquest/id1519862519' class='simple-link' target='_blank'>Chemquest App</a></span> which aimed to build a chemistry companion app that could be used as a tool for studying. It also allows users to hand-sketch chemical compounds and it will attempt to predict the isomer using SMILES notation. It integrates with PubMed",
                 "thumbnail": "../../../../assets/images/experience/fairfield.png",
                 "url": "https://apps.apple.com/us/app/chemquest/id1519862519"
@@ -125,7 +125,7 @@
             "charterCommunications": {
                 "company": "<strong class='bottom-border'><a href='https://www.spectrum.net/' class='simple-link' target='_blank'>Charter Communications</a></strong>",
                 "position": "Senior Developer",
-                "dates": "2022 - present [Denver, CO (remote)]",
+                "dates": "2022 - present @ [Denver, CO (remote)]",
                 "description": "Charter is one of the biggest telcom companies in the USA, It serves 32 million users in 41 states. Lead developer of 3 features (as of may 2024). Main lead of Service Appointments which on average has served 104K users with a <strong>98.16%</strong> success rate on its flows.",
                 "thumbnail": "../../../../assets/images/experience/spectrum.png",
                 "url": "https://www.spectrum.net/"   
