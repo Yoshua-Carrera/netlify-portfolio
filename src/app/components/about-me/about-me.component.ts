@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { StaticCopyService } from '@core-services/static-copy.service'
 import { AboutMeCopy } from '../../models/static-copy.model';
 import { techStack } from 'app/models/keyword-seo.model';
