@@ -1,4 +1,3 @@
-import { computeDecimalDigest } from '@angular/compiler/src/i18n/digest';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
