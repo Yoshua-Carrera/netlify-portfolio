@@ -108,7 +108,7 @@
             },
             "fairfieldUniversity": {
                 "company": "<strong class='bottom-border'><a href='https://www.fairfield.edu/' class='simple-link' target='_blank'>Fairfield University</a></strong>",
-                "position": "Ionic/Angular Developer",
+                "position": "Angular/Ionic Developer",
                 "dates": "2020 - 2022 @ [Fairfield CT]",
                 "description": "Fairfield University funded the project <span class='bottom-border'><a href='https://apps.apple.com/us/app/chemquest/id1519862519' class='simple-link' target='_blank'>Chemquest App</a></span> which aimed to build a chemistry companion app that could be used as a tool for studying. It also allows users to hand-sketch chemical compounds and it will attempt to predict the isomer using SMILES notation. It integrates with PubMed",
                 "thumbnail": "../../../../assets/images/experience/fairfield.png",
