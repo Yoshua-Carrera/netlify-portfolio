@@ -6,7 +6,8 @@ import { techStack } from 'app/models/keyword-seo.model';
 @Component({
   selector: 'about-me',
   templateUrl: './about-me.component.html',
-  styleUrl: './about-me.component.scss'
+  styleUrl: './about-me.component.scss',
+
 })
 export class AboutMeComponent implements OnInit {
   aboutMeCopy: AboutMeCopy

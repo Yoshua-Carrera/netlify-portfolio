@@ -1,0 +1,156 @@
+@import "../../../styles.scss";
+
+.main-body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8%;
+}
+
+.mat-headline-4 {
+  margin-bottom: 0;
+}
+
+.sub-body {
+  margin-top: 2rem;
+}
+
+.portrait {
+  border-radius: 50%;
+  max-height: 20rem;
+  box-shadow: 0 1.24rem 1.5rem rgba(0, 0, 0, 0.1);
+  outline: 0.15rem dashed white;
+  outline-offset: 0.5rem;
+  border: 0.25rem dashed transparent;
+  background: linear-gradient(45deg, $main-indigo, $main-pink) border-box;
+}
+
+.carousel-moving-container {
+  display: flex;
+  gap: 1rem;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.carousel::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  pointer-events: none;
+  background-image: linear-gradient(to right, $dark-grey, $dark-grey-opacity-50, $dark-grey-opacity-0, $dark-grey-opacity-50, $dark-grey);
+  width: 100vw;
+  height: 7rem;
+}
+
+.carousel-item {
+  border: solid 4px $space-grey;
+  background-color: whitesmoke;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: $space-grey;
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+  display: flex;
+  justify-content: center;
+  min-height: 4.5rem;
+  min-width: 8rem;
+  align-items: center;
+  box-sizing: content-box;
+}
+
+p {
+  padding-left: 2rem;
+}
+
+strong {
+  border-bottom: 5px solid purple;
+}
+
+@media (min-width: 200px) {
+  .main-body {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .portrait {
+    max-height: 15rem;
+  }
+  .mat-headline-4 {
+    font-size: 1.5rem;
+    padding: 1rem;
+    padding-right: 0.75rem;
+  }
+}
+
+@media (min-width: 400px) {
+  .main-body {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .portrait {
+    max-height: 18rem;
+  }
+  .mat-headline-4 {
+    font-size: 1.5rem;
+    padding: 1rem;
+    padding-right: 1.25rem;
+  }
+}
+
+@media (min-width: 550) {
+  .main-body {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .portrait {
+    max-height: 20rem;
+  }
+  .mat-headline-4 {
+    font-size: 1.5rem;
+    padding: 1rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 750px) {
+  .mat-headline-4 {
+    font-size: 1.75rem;
+    padding: 1.25rem;
+    padding-right: 2rem;
+  }
+  .main-body {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .portrait {
+    margin-right: 0;
+  }
+  .top-text,
+  .bottom-text {
+    text-align: left;
+  }
+}
+
+@media (min-width: 900px) {
+  .mat-headline-4 {
+    font-size: 2rem;
+    padding-right: 2rem;
+  }
+  .portrait {
+    max-height: 20rem;
+    margin-right: 1rem;
+  }
+  .main-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8%;
+  }
+  .top-text {
+    padding-right: 2rem;
+  }
+}

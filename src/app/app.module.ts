@@ -9,8 +9,6 @@ import { MatListModule } from '@angular/material/list';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { StoreModule } from '@ngrx/store';
-import { EffectsModule } from '@ngrx/effects';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
@@ -30,6 +28,7 @@ import { NetlifyStoreModule } from '@core-store/netlify-store.module';
 import { GridTimelineComponent } from './components/experience/grid-timeline/grid-timeline.component';
 import { TimelineCardComponent } from './components/experience/timeline-card/timeline-card.component';
 import { TimelineRedesignedComponent } from './components/experience/timeline-redesigned/timeline-redesigned.component';
+import { TempComponent } from './components/temp/temp.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +36,6 @@ import { TimelineRedesignedComponent } from './components/experience/timeline-re
     NavBarComponent,
     GenericDialogueComponent,
     HomePageComponent,
-    AboutMeComponent,
     ProjectsComponent,
     ExperienceComponent,
     ContactComponent,
@@ -46,6 +44,8 @@ import { TimelineRedesignedComponent } from './components/experience/timeline-re
     GridTimelineComponent,
     TimelineCardComponent,
     TimelineRedesignedComponent,
+    TempComponent,
+    AboutMeComponent
   ],
   imports: [
     NetlifyStoreModule,
