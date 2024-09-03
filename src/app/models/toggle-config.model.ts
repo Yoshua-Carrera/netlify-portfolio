@@ -1,4 +1,5 @@
 export interface ApplicationToggles {
     timelineRedesign: boolean;
-    darkTheme: boolean
+    darkTheme: boolean;
+    multipleRoutes: boolean;
 }

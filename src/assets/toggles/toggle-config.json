@@ -1,4 +1,5 @@
 {
     "timelineRedesign": true,
-    "darkTheme": false
+    "darkTheme": false,
+    "multipleRoutes": false
 }
