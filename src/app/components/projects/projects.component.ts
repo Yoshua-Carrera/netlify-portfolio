@@ -21,7 +21,6 @@ export class ProjectsComponent implements OnInit {
     this.projectsCopy = this.staticCopyService.getJsonCopy().projects
     this.projectConfigs = [
       this.projectsCopy.spectrumWeb,
-      this.projectsCopy.criterion,
       this.projectsCopy.chemquestApp,
       this.projectsCopy.catManga,
       this.projectsCopy.cuponcity,
