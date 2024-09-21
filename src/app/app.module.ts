@@ -29,6 +29,8 @@ import { GridTimelineComponent } from './components/experience/grid-timeline/gri
 import { TimelineCardComponent } from './components/experience/timeline-card/timeline-card.component';
 import { TimelineRedesignedComponent } from './components/experience/timeline-redesigned/timeline-redesigned.component';
 import { TempComponent } from './components/temp/temp.component';
+import { FormComponent } from './form/form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,8 @@ import { TempComponent } from './components/temp/temp.component';
     TimelineCardComponent,
     TimelineRedesignedComponent,
     TempComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    FormComponent
   ],
   imports: [
     NetlifyStoreModule,
@@ -60,6 +63,7 @@ import { TempComponent } from './components/temp/temp.component';
     MatSlideToggleModule,
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
   ],
   providers: [provideAnimationsAsync()],

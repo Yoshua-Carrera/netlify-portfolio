@@ -1,0 +1,37 @@
+<div class="main">
+  <form
+    [formGroup]="customFormGroup"
+    (ngSubmit)="onSubmit()"
+    class="reactiveForm"
+    (change)="onChange(customFormGroup.status)"
+  >
+    <div class="username">
+      <label for="username">Username: </label>
+      <input type="text" #username formControlName="username" />
+    </div>
+    <div class="password">
+      <label for="username">Password: </label>
+      <input type="password" #password formControlName="password" />
+    </div>
+    <button type="submit">Submit</button>
+    <div
+      class="form-warning"
+      *ngIf="
+        ((customFormGroup.get('password').invalid &&
+          customFormGroup.get('password').touched)) ||
+        ((customFormGroup.get('username').invalid &&
+          customFormGroup.get('username').touched)) ||
+          submittedInvalid
+      "
+    >
+      <small *ngIf="(
+        customFormGroup.get('password').errors?.['required'] || 
+        customFormGroup.get('username').errors?.['required'] ||
+        customFormGroup.get('username').errors?.['minlength'] ||
+        customFormGroup.get('password').errors?.['minlength']
+      ) || submittedInvalid">
+        Field is required.
+      </small>
+    </div>
+  </form>
+</div>

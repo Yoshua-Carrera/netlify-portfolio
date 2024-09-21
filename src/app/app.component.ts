@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from "@angular/core";
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 import { MainContainerIds } from "./models/navigation.model";
 import { ViewportScroller } from "@angular/common";
 import { Observable, timer } from "rxjs";
@@ -7,6 +7,7 @@ import { HeaderNavigationData } from "@core-models/static-copy.model";
 import { StaticCopyService } from "@core-services/static-copy.service";
 import { ConfigTogglesService } from "@core-services/config-toggles.service";
 import toggleConfig from '@core-assets/toggles/toggle-config.json'
+import { ApplicationToggles } from "@core-models/toggle-config.model";
 
 @Component({
   selector: "app-root",
@@ -14,6 +15,8 @@ import toggleConfig from '@core-assets/toggles/toggle-config.json'
   styleUrl: "./app.component.scss",
 })
 export class AppComponent implements OnInit, AfterViewInit {
+  needsToLogin: boolean = true;
+  applicationToggles$: Observable<ApplicationToggles>;
   intersectionObserver: (tagetClass?: string) => IntersectionObserver;
   parentIntersectionObserver: () => IntersectionObserver;
   contactDialogueTimer: Observable<number> = timer(1000, 1000);
@@ -26,8 +29,10 @@ export class AppComponent implements OnInit, AfterViewInit {
   timelineDivider: NodeListOf<Element>;
   getParentContainers: NodeListOf<Element>;
   headerLinks: HeaderNavigationData[];
+  @ViewChild('test') test: ElementRef;
 
   ngOnInit(): void {
+    this.applicationToggles$ = this.netlifyFacade.getApplicationToggles$
     this.configTogglesService.loadToggleConfig(toggleConfig)
     this.intersectionObserver = (tagetClass?: string) =>
       new IntersectionObserver((entries: IntersectionObserverEntry[]) => {

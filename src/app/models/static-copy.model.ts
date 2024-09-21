@@ -29,7 +29,6 @@ export interface ProjectsCopy {
     header: string;
     seeMore: string;
     catManga: ProjectDetails;
-    criterion: ProjectDetails;
     cuponcity: ProjectDetails;
     chemquestApp: ProjectDetails;
     spectrumWeb: ProjectDetails;
@@ -81,7 +80,6 @@ export interface AboutMeCopy {
 export interface ExperienceCopy {
     header: string,
     sicobra: ExperienceDetails,
-    criterion: ExperienceDetails,
     cuponCity: ExperienceDetails,
     fairfieldUniversity: ExperienceDetails,
     charterCommunications: ExperienceDetails,

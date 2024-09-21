@@ -2,7 +2,6 @@ import { DialogueState, NetlifyState } from "@core-models/netlify-state.model";
 import { ApplicationToggles } from "@core-models/toggle-config.model";
 import { NETLIFY_STORE_KEY } from "@core-store/reducers/netlify.reducers";
 import { MemoizedSelector, createFeatureSelector, createSelector } from "@ngrx/store";
-import { Observable } from "rxjs";
 
 export const getNetlifyState: MemoizedSelector<NetlifyState, NetlifyState> = createFeatureSelector(NETLIFY_STORE_KEY)
 

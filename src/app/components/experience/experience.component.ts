@@ -35,10 +35,9 @@ export class ExperienceComponent implements OnInit, AfterViewInit {
     this.tiles = this.timelineGridService.buildGridConfig(
       [
         ExperienceCompanies.CHARTER_COMMUNICATIONS,
-        ExperienceCompanies.CRITERION,
         ExperienceCompanies.FAIRFIELD_UNIVERSITY,
-        ExperienceCompanies.CUPON_CITY,
         ExperienceCompanies.SICOBRA,
+        ExperienceCompanies.CUPON_CITY,
       ],
       'transparent',
       'radio_button_checked',
