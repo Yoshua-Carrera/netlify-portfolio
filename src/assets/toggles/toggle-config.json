@@ -1,5 +1,6 @@
 {
     "timelineRedesign": true,
     "darkTheme": false,
-    "multipleRoutes": false
+    "multipleRoutes": false,
+    "loginEnabled": false
 }
