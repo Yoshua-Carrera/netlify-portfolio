@@ -26,6 +26,9 @@ $main-bg-color: rgb(48, 48, 48);
     @media (min-width: 650px) {
         justify-content: flex-end;
     }
+    .wave--spacer {
+        height: 50%;
+    }
 }
 
 h1 {
