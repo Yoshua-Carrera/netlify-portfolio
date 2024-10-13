@@ -133,11 +133,6 @@
                     "subtitle": "<a href='https://www.linkedin.com/in/yoshua-carrera/' target='_blank'>www.linkedin.com/in/yoshua-carrera</a>",
                     "img": "../../../assets/images/contact-mediums/linkedin-logo.svg"
                 },
-                "phoneNumber": {
-                    "name": "Phone Number",
-                    "subtitle": "<a href='tel:2032148763'>(203)-214-8763</a>",
-                    "img": "../../../assets/images/contact-mediums/phone-logo.svg"
-                },
                 "resume": {
                     "name": "Resume",
                     "subtitle": "<a href='../../../assets/documents/yoshua-carrera-resume.pdf' target='_blank'>Click to download</a>",

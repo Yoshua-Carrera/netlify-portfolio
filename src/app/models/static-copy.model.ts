@@ -19,7 +19,7 @@ export interface ContactCopy {
 export interface ContactMediumCopy {
     github: ContactMedium;
     email: ContactMedium;
-    phoneNumber: ContactMedium;
+    phoneNumber?: ContactMedium;
     linkedin: ContactMedium;
     resume: ContactMedium;
 
