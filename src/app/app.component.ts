@@ -32,6 +32,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   @ViewChild('test') test: ElementRef;
 
   ngOnInit(): void {
+    this.logger.info("Aplication Initialized")
     this.applicationToggles$ = this.netlifyFacade.getApplicationToggles$
     this.configTogglesService.loadToggleConfig(toggleConfig)
     this.intersectionObserver = (tagetClass?: string) =>
@@ -94,6 +95,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     private scroller: ViewportScroller,
     private netlifyFacade: NetlifyFacade,
     private staticCopyService: StaticCopyService,
-    private configTogglesService: ConfigTogglesService
-  ) {}
+    private configTogglesService: ConfigTogglesService,
+    private logger: NGXLogger,
+  ) { }
 }
