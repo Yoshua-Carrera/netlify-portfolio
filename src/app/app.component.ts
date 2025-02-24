@@ -8,6 +8,7 @@ import { StaticCopyService } from "@core-services/static-copy.service";
 import { ConfigTogglesService } from "@core-services/config-toggles.service";
 import toggleConfig from '@core-assets/toggles/toggle-config.json'
 import { ApplicationToggles } from "@core-models/toggle-config.model";
+import { NGXLogger } from "ngx-logger";
 
 @Component({
   selector: "app-root",
