@@ -8,6 +8,7 @@ import { StaticCopyService } from "@core-services/static-copy.service";
 import { ConfigTogglesService } from "@core-services/config-toggles.service";
 import toggleConfig from '@core-assets/toggles/toggle-config.json'
 import { ApplicationToggles } from "@core-models/toggle-config.model";
+import { NGXLogger } from "ngx-logger";
 
 @Component({
   selector: "app-root",
@@ -32,6 +33,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   @ViewChild('test') test: ElementRef;
 
   ngOnInit(): void {
+    this.logger.info("Aplication Initialized")
     this.applicationToggles$ = this.netlifyFacade.getApplicationToggles$
     this.configTogglesService.loadToggleConfig(toggleConfig)
     this.intersectionObserver = (tagetClass?: string) =>
@@ -94,6 +96,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     private scroller: ViewportScroller,
     private netlifyFacade: NetlifyFacade,
     private staticCopyService: StaticCopyService,
-    private configTogglesService: ConfigTogglesService
-  ) {}
+    private configTogglesService: ConfigTogglesService,
+    private logger: NGXLogger,
+  ) { }
 }

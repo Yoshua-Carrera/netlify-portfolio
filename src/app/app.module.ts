@@ -31,6 +31,7 @@ import { TimelineRedesignedComponent } from './components/experience/timeline-re
 import { TempComponent } from './components/temp/temp.component';
 import { FormComponent } from './form/form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,10 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     NetlifyStoreModule,
+    LoggerModule.forRoot({
+      level: NgxLoggerLevel.DEBUG,
+      serverLogLevel: NgxLoggerLevel.ERROR
+    }),
     MatListModule,
     MatChipsModule,
     MatCardModule,
@@ -69,4 +74,4 @@ import { ReactiveFormsModule } from '@angular/forms';
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
