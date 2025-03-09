@@ -1,0 +1,26 @@
+@import "styles.scss";
+
+timeline-card {
+  display: block;
+  width: 50%;
+  padding: 0 0.75rem;
+  box-sizing: border-box;
+  &.right-message {
+    translate: 100%;
+    padding-left: 1.25rem;
+  }
+  transition: all 1s ease-out;
+}
+
+@media (max-width: 600px) {
+  timeline-card {
+    width: 100%;
+    &.right-message {
+      translate: 0%;
+      padding-left: 2rem;
+    }
+    &.left-message {
+      padding-left: 2rem;
+    }
+  }
+}
