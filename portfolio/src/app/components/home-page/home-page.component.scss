@@ -1,0 +1,94 @@
+@import 'styles.scss';
+
+$gray-accent-color: #242424;
+$purple-accent-color: rgb(194,99,253);
+$pink-accent-color: rgb(255,107,178);
+$main-bg-color: rgb(48, 48, 48);
+
+* {
+    background-color: $space-grey;
+}
+
+.main-container {
+    background-color: $space-grey;
+}
+
+.cover {
+    padding-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 101vh;
+    justify-content: space-between;
+    @media (min-width: 200px) {
+        justify-content: space-between;
+    }
+    @media (min-width: 650px) {
+        justify-content: flex-end;
+    }
+    .wave--spacer {
+        height: 50%;
+    }
+}
+
+h1 {
+    text-align: center;
+    line-height: 1;
+    @media (min-width: 200px) {
+        font-size: 2rem
+    }
+    @media (min-width: 400px) {
+        font-size: 2.5rem
+    }
+    @media (min-width: 650px) {
+        font-size: 2.75rem
+    }
+    @media (min-width: 1000px) {
+        font-size: 3rem
+    }
+}
+
+span {
+    color: $purple-accent-color;
+    text-shadow: $purple-accent-color 0 0 0.2em;
+}
+
+button {
+    width: fit-content;
+    padding: 0.5rem 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    color: $purple-accent-color;
+    font-size: 2rem;
+    font-weight: bolder;
+    background-color: transparent;
+    border-radius: 0.5em;
+    border: 1px solid $gray-accent-color;
+    box-shadow: 0 0 0.2em $purple-accent-color;
+    box-shadow: inset 0 0 0.1em $purple-accent-color;
+    text-shadow: $purple-accent-color 0 0 1em;
+    transition: 0.5s;
+    @media (min-width: 200px) {
+        font-size: 1.5rem;
+        width: 80%;
+        margin-bottom: 40%;
+    }
+    @media (min-width: 650px) {
+        font-size: 2rem;
+        width: fit-content;
+        margin-bottom: 2rem;
+    }
+}
+
+button:hover {
+    background-color: $purple-accent-color;
+    color: white;
+    border: 1px $purple-accent-color solid;
+    box-shadow: ((inset 0 0 0.5em $purple-accent-color, 0 0 0.15em $purple-accent-color), (inset 0 0 0.3em $purple-accent-color, 0 0 0.25em $purple-accent-color));  
+}
+
+mat-icon {
+    vertical-align: middle !important;
+    font-weight: bold;
+    background-color: transparent;
+}

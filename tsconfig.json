@@ -1,17 +1,7 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
+  "extends": "./portfolio/tsconfig.json",
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "src",
-    "paths": {
-      "@core-assets/*": ["assets/*"],
-      "@core-services/*": ["app/services/*"],
-      "@core-components/*": ["app/components/*"],
-      "@core-models/*": ["app/models/*"],
-      "@core-store/*": ["app/store/*"],
-    },
-    "strictNullChecks": false,
-    "resolveJsonModule": true,
     "outDir": "./dist/out-tsc",
     "strict": true,
     "noImplicitOverride": true,
@@ -19,15 +9,16 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
+    "isolatedModules": true,
     "esModuleInterop": true,
     "sourceMap": true,
     "declaration": false,
     "experimentalDecorators": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "importHelpers": true,
     "target": "ES2022",
-    "module": "ES2022",
     "useDefineForClassFields": false,
+    "module": "ES2022",
     "lib": [
       "ES2022",
       "dom"
@@ -38,5 +29,5 @@
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
-  },
+  }
 }

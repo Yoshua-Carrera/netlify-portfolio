@@ -1,0 +1,260 @@
+@use '@angular/material' as mat;
+@include mat.core();
+
+$space-grey: rgb(50,50,49);
+$dim-purple: rgb(113,93,242, 5%);
+$main-indigo: rgb(102,0,255);
+$tame-indigo: rgba(102,0,255, 25%);
+$hover-purple: rgb(226 213 246);
+$main-pink: rgb(213,0,196);
+$card-grey: rgb(66,66,66);
+$dark-grey: rgb(26, 24, 26);
+$cgp-grey: rgb(30, 30, 30);
+$dark-grey-opacity-0: rgba(26, 24, 26, 0);
+$dark-grey-opacity-50: rgba(26, 24, 26, 50%);
+$blur: 0.5rem;
+$box-blur: calc(0.25 * var($blur));
+$glow: white;
+$size: 12rem;
+
+$dark-theme: mat.define-theme((
+  color: (
+    theme-type: dark,
+    primary: mat.$violet-palette,
+  ),
+  typography: (
+    brand-family: 'Comic Sans',
+    bold-weight: 900
+  ),
+  density: (
+    scale: -1
+  )
+));
+
+$light-theme: mat.define-theme((
+  color: (
+    theme-type: light,
+    primary: mat.$violet-palette,
+  ),
+  typography: (
+    brand-family: 'Comic Sans',
+    bold-weight: 900
+  ),
+  density: (
+    scale: -1
+  )
+));
+
+.dark {
+    @include mat.all-component-colors($dark-theme);
+    background-color: $space-grey;
+    color: salmon
+}
+
+.light {
+  @include mat.all-component-colors($light-theme);
+  background-color: white;
+  color: black
+}
+
+.wave--spacer {
+  aspect-ratio: 900/400;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  &.xs {
+    height: 35rem;
+    @media (min-width: 400px) {
+      height: 20rem;
+    }
+    @media (min-width: 600px) {
+      height: 25rem;
+    }
+    @media (min-width: 900px) {
+      height: 30rem;
+    }
+  }
+  &.dark--grey {
+    background-color: $dark-grey;
+  }
+  &.space--grey {
+    background-color: $space-grey;
+  }
+  &.transparent {
+    background-color: transparent;
+  }
+}
+
+.github--logo {
+  aspect-ratio: 900/400;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-image: url('./assets/images/contact-mediums/github-logo.svg');
+}
+
+.gmail--logo {
+  aspect-ratio: 900/400;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-image: url('./assets/images/contact-mediums/gmail-logo.svg');
+}
+
+.phone--number {
+  aspect-ratio: 900/400;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-image: url('./assets/images/contact-mediums/phone-logo.svg');
+}
+
+.wave--top--layer {
+  background-image: url('./assets/images/top-wave-a.svg');
+}
+
+.wave--bottom--layer {
+  background-image: url('./assets/images/bottom-wave-a.svg');
+}
+
+.wave--top--alt--layer {
+  background-image: url('./assets/images/top-wave-b.svg');
+}
+
+.wave--bottom--alt--layer {
+  background-image: url('./assets/images/bottom-wave-b.svg');
+}
+
+.bottom-border {
+  border-bottom: 5px solid purple;
+}
+
+.dark--grey {
+  background-color: $dark-grey;
+}
+
+.simple-link {
+  text-decoration: none;
+}
+
+.simple-link:hover {
+  color: $hover-purple;
+}
+
+.full-height-container {
+  min-height: 100vh;
+  padding: 5rem 1rem 1rem 1rem
+}
+
+.undeline--effect {
+  display: inline-block;
+  position: relative;
+}
+
+
+.undeline--effect::before {
+  content: '';
+  top: 4.5rem;
+  width: 0%;
+  height: 0.75rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: $main-indigo;
+  animation: underline-growth 1.5s linear forwards;
+}
+
+.undeline--effect.pink--accent::before {
+  background-color: $main-pink;
+}
+
+.no-scroll-y {
+  overflow-y: hidden;
+}
+
+.no-scroll-x {
+  overflow-x: hidden;
+}
+
+@keyframes underline-growth {
+  to { width: 100%; }
+}
+
+.faded {
+  opacity: 0;
+}
+
+.fade--in-effect {
+  opacity: 0;
+  animation: fade-in 1s ease-in forwards;
+}
+
+.scroll--effect {
+  animation: scrolling 40s infinite
+}
+
+.grow--down-effect-after {
+  ::after {
+    animation: grow-down 4s linear forwards
+  }
+}
+
+.justify {
+  text-align: justify;
+}
+
+@keyframes grow-down {
+  to { height: 100%; }
+}
+
+@keyframes fade-in {
+  to { 
+    opacity: 1;
+    transform: translateY(-1rem)
+  }
+}
+
+@keyframes scrolling {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+
+* {
+    color: whitesmoke;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+html, body { height: 100%; }
+body {
+  background-color: $space-grey;
+}
+body {
+  margin: 0;
+  font-family:
+  Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: transparent; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}

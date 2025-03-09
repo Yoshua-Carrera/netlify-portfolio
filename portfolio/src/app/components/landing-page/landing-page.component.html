@@ -1,0 +1,23 @@
+<div class="main">
+  <home-page
+    id="home"
+    class="dark"
+    (navigateToggle)="onNavigateDown($event)"
+  ></home-page>
+  <about-me id="about" class="about parent--container" #about></about-me>
+  <div class="wave--spacer wave--bottom--alt--layer xs dark--grey"></div>
+  <experience
+    id="experience"
+    class="skillset parent--container"
+    #experience
+  ></experience>
+  <div class="wave--spacer wave--bottom--alt--layer xs dark--grey"></div>
+  <projects
+    id="projects"
+    class="projects parent--container"
+    #projects
+  ></projects>
+  <div class="wave--spacer wave--bottom--alt--layer xs dark--grey"></div>
+  <contact id="contact" class="contact parent--container" #contact></contact>
+  <div class="wave--spacer wave--bottom--layer xs transparent"></div>
+</div>
