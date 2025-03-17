@@ -5,9 +5,11 @@
     "ng": "ng",
     "start": "ng serve",
     "install:portfolio": "cd portfolio && yarn",
+    "build:portfolio": "yarn install:all && ng build portfolio",
+    "build:blog-mfe": "yarn install:all && ng build blog-mfe",
     "install:blog-mfe": "cd blog-mfe && yarn",
     "install:all": "yarn install:portfolio && yarn install:blog-mfe",
-    "build": "yarn install:all && ng build portfolio && ng build blog-mfe",
+    "build:all": "yarn install:all && ng build portfolio && ng build blog-mfe",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js"
