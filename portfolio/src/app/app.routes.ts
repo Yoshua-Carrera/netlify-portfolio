@@ -1,6 +1,5 @@
 import { loadRemoteModule } from '@angular-architects/module-federation';
 import { Routes } from '@angular/router';
-import { AppComponent } from './app.component';
 import { netlifyGuard } from './guards/netlify.guard';
 import { LandingPageComponent } from '@core-components/landing-page/landing-page.component';
 
