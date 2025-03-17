@@ -4,10 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "install:portfolio": "cd portfolio && npm i --legacy-peer-deps",
-    "install:blog-mfe": "cd blog-mfe && npm i --legacy-peer-deps",
-    "install:all": "npm run install:portfolio && npm run install:blog-mfe",
-    "build": "npm run install:all && ng build portfolio && ng build blog-mfe",
+    "install:portfolio": "cd portfolio && yarn",
+    "install:blog-mfe": "cd blog-mfe && yarn",
+    "install:all": "yarn install:portfolio && yarn install:blog-mfe",
+    "build": "yarn install:all && ng build portfolio && ng build blog-mfe",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js"
