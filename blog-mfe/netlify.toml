@@ -9,4 +9,4 @@
       Access-Control-Allow-Origin = "*"
 
 [build]
-  command = "yarn build"
+  command = "yarn build:blog-mfe"
