@@ -1,4 +1,10 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from "@angular/core";
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnInit,
+  ViewChild,
+} from "@angular/core";
 import { MainContainerIds } from "./models/navigation.model";
 import { ViewportScroller } from "@angular/common";
 import { Observable, timer } from "rxjs";
@@ -6,7 +12,7 @@ import { NetlifyFacade } from "@core-store/facades/netlify-facade";
 import { HeaderNavigationData } from "@core-models/static-copy.model";
 import { StaticCopyService } from "@core-services/static-copy.service";
 import { ConfigTogglesService } from "@core-services/config-toggles.service";
-import toggleConfig from '@core-assets/toggles/toggle-config.json'
+import toggleConfig from "@core-assets/toggles/toggle-config.json";
 import { ApplicationToggles } from "@core-models/toggle-config.model";
 import { NGXLogger } from "ngx-logger";
 
@@ -14,7 +20,7 @@ import { NGXLogger } from "ngx-logger";
   selector: "app-root",
   templateUrl: "./app.component.html",
   styleUrl: "./app.component.scss",
-  standalone: false
+  standalone: false,
 })
 export class AppComponent implements OnInit, AfterViewInit {
   needsToLogin: boolean = true;
@@ -31,12 +37,12 @@ export class AppComponent implements OnInit, AfterViewInit {
   timelineDivider: NodeListOf<Element>;
   getParentContainers: NodeListOf<Element>;
   headerLinks: HeaderNavigationData[];
-  @ViewChild('test') test: ElementRef;
+  @ViewChild("test") test: ElementRef;
 
   ngOnInit(): void {
-    this.logger.info("Aplication Initialized")
-    this.applicationToggles$ = this.netlifyFacade.getApplicationToggles$
-    this.configTogglesService.loadToggleConfig(toggleConfig)
+    this.logger.info("Aplication Initialized");
+    this.applicationToggles$ = this.netlifyFacade.getApplicationToggles$;
+    this.configTogglesService.loadToggleConfig(toggleConfig);
     this.intersectionObserver = (tagetClass?: string) =>
       new IntersectionObserver((entries: IntersectionObserverEntry[]) => {
         entries.forEach((entry: IntersectionObserverEntry) => {
@@ -49,9 +55,13 @@ export class AppComponent implements OnInit, AfterViewInit {
       new IntersectionObserver((entries: IntersectionObserverEntry[]) => {
         entries.forEach((entry: IntersectionObserverEntry) => {
           if (entry.isIntersecting) {
-            document.getElementsByClassName(`mat-h1 glow ${entry.target.id}`)?.[0].classList.add("active");
+            document
+              .getElementsByClassName(`mat-h1 glow ${entry.target.id}`)?.[0]
+              .classList.add("active");
           } else {
-            document.getElementsByClassName(`mat-h1 glow ${entry.target.id}`)?.[0].classList.remove("active");
+            document
+              .getElementsByClassName(`mat-h1 glow ${entry.target.id}`)?.[0]
+              .classList.remove("active");
           }
         });
       });
@@ -68,15 +78,28 @@ export class AppComponent implements OnInit, AfterViewInit {
       this.contactElement = document.querySelectorAll(".contact-container");
       this.fadeInElements = document.querySelectorAll(".watch--fade--in");
       this.underlineElements = document.querySelectorAll(".mat-headline-2");
-      this.getParentContainers = document.querySelectorAll(".parent--container");
-      this.timelineElements = document.querySelectorAll('.timeline-card')
-      this.timelineDivider = document.querySelectorAll('.timeline-container')
-      this.timelineDivider.forEach((element: Element) => this.intersectionObserver('grow--down-effect-after').observe(element))
-      this.timelineElements.forEach((element: Element) => this.intersectionObserver('fade--in-effect').observe(element))
-      this.getParentContainers.forEach((element: Element) => this.parentIntersectionObserver().observe(element));
-      this.contactElement.forEach((element: Element) => this.intersectionObserver().observe(element));
-      this.fadeInElements.forEach((element: Element) => this.intersectionObserver("fade--in-effect").observe(element));
-      this.underlineElements.forEach((element: Element) => this.intersectionObserver("undeline--effect").observe(element));
+      this.getParentContainers =
+        document.querySelectorAll(".parent--container");
+      this.timelineElements = document.querySelectorAll(".timeline-card");
+      this.timelineDivider = document.querySelectorAll(".timeline-container");
+      this.timelineDivider.forEach((element: Element) =>
+        this.intersectionObserver("grow--down-effect-after").observe(element),
+      );
+      this.timelineElements.forEach((element: Element) =>
+        this.intersectionObserver("fade--in-effect").observe(element),
+      );
+      this.getParentContainers.forEach((element: Element) =>
+        this.parentIntersectionObserver().observe(element),
+      );
+      this.contactElement.forEach((element: Element) =>
+        this.intersectionObserver().observe(element),
+      );
+      this.fadeInElements.forEach((element: Element) =>
+        this.intersectionObserver("fade--in-effect").observe(element),
+      );
+      this.underlineElements.forEach((element: Element) =>
+        this.intersectionObserver("undeline--effect").observe(element),
+      );
     }, 0);
   }
 
@@ -101,5 +124,5 @@ export class AppComponent implements OnInit, AfterViewInit {
     private staticCopyService: StaticCopyService,
     private configTogglesService: ConfigTogglesService,
     private logger: NGXLogger,
-  ) { }
+  ) {}
 }
