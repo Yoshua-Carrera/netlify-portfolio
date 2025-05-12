@@ -1,5 +1,6 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { AbstractControl, FormBuilder, FormControl, FormControlStatus, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormControl, FormControlStatus, FormGroup, ReactiveFormsModule, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 import { FormStatus } from '@core-models/form.models';
 import { take, tap, timer } from 'rxjs';
 
@@ -7,7 +8,8 @@ import { take, tap, timer } from 'rxjs';
   selector: 'netlify-form',
   templateUrl: './form.component.html',
   styleUrl: './form.component.scss',
-  standalone: false
+  imports: [ReactiveFormsModule, CommonModule],
+  standalone: true
 })
 export class FormComponent {
   submittedInvalid: boolean;

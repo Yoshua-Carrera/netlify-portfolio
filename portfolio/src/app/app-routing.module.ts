@@ -1,14 +1,11 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { TempComponent } from "@core-components/temp/temp.component";
-import { netlifyResolver } from "./resolvers/netlify.resolver";
 import { netlifyGuard } from "./guards/netlify.guard";
 
 const routes: Routes = [
-  { path: "", component: TempComponent, resolve: { data: netlifyResolver } },
   {
     path: "about",
-    loadComponent: () => import('./components/about-me-standalone/about-me-standalone.component').then(m => m.AboutMeComponentStandalone),
+    loadComponent: () => import('./components/about-me/about-me.component').then(m => m.AboutMeComponent),
     canActivate: [netlifyGuard],
   },
   {

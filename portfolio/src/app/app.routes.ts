@@ -1,21 +1,21 @@
-import { loadRemoteModule } from '@angular-architects/module-federation';
-import { Routes } from '@angular/router';
-import { netlifyGuard } from './guards/netlify.guard';
-import { LandingPageComponent } from '@core-components/landing-page/landing-page.component';
+import { loadRemoteModule } from "@angular-architects/module-federation";
+import { Routes } from "@angular/router";
+import { netlifyGuard } from "./guards/netlify.guard";
+import { LandingPageComponent } from "@core-components/landing-page/landing-page.component";
 
 export const APP_ROUTES: Routes = [
   {
-    path: '',
+    path: "",
     component: LandingPageComponent,
   },
   {
-    path: 'blog',
-    loadChildren: () =>
+    path: "blog",
+    loadComponent: () =>
       loadRemoteModule({
-        type: 'manifest',
-        remoteName: 'blog-mfe',
-        exposedModule: './Module',
-      }).then((m) => m.AppModuleMfe),
+        type: "manifest",
+        remoteName: "blog-mfe",
+        exposedModule: "./Component",
+      }).then((m) => m.AppComponent),
     canActivate: [netlifyGuard],
   },
 ];

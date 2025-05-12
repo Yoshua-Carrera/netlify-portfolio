@@ -9,6 +9,6 @@
     }
   </div>
   <div class="dark-mode-toggle dark">
-    <mat-slide-toggle class="dark"></mat-slide-toggle>
+    <mat-slide-toggle *ngIf="shouldShowDarkToggle" class="dark"></mat-slide-toggle>
   </div>
 </div>
