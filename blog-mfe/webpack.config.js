@@ -7,7 +7,7 @@ module.exports = withModuleFederationPlugin({
   name: "blog-mfe",
 
   exposes: {
-    './Module': './blog-mfe/src/app/app.module.ts',
+    './Component': './blog-mfe/src/app/app.component.ts',
   },
 
   shared: {

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { MatCardModule } from '@angular/material/card';
 import { Router } from '@angular/router';
 import { CardHoverState } from '@core-models/projects.model';
 import { ProjectDetails, ProjectsCopy } from '@core-models/static-copy.model';
@@ -7,7 +8,8 @@ import { ProjectDetails, ProjectsCopy } from '@core-models/static-copy.model';
   selector: 'project-card',
   templateUrl: './project-card.component.html',
   styleUrl: './project-card.component.scss',
-  standalone: false
+  imports: [MatCardModule],
+  standalone: true
 })
 export class ProjectCardComponent implements OnInit {
   @Input() projectConfig: ProjectDetails;

@@ -8,7 +8,7 @@ import { CoverCopy } from 'app/models/static-copy.model';
   selector: 'home-page',
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss',
-  standalone: false
+  standalone: true
 })
 export class HomePageComponent implements OnInit {
   @Output() public navigateToggle = new EventEmitter<MainContainerIds>()

@@ -1,16 +1,19 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { MatListModule } from '@angular/material/list';
 import { ContactMedium } from '@core-models/contact.model';
 import { DialogueState } from '@core-models/netlify-state.model';
 import { ContactCopy } from '@core-models/static-copy.model';
 import { StaticCopyService } from '@core-services/static-copy.service';
 import { NetlifyFacade } from '@core-store/facades/netlify-facade';
+import { SafeHtmlPipe } from 'app/pipes/safe-html.pipe';
 import { Observable } from 'rxjs';
 
 @Component({
   selector: 'contact',
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
-  standalone: false
+  imports: [MatListModule, SafeHtmlPipe],
+  standalone: true
 })
 export class ContactComponent implements OnInit, AfterViewInit {
   intersectionObserver: () => IntersectionObserver;
