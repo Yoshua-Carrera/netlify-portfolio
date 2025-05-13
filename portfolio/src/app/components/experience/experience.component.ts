@@ -56,6 +56,7 @@ export class ExperienceComponent implements OnInit, AfterViewInit {
     this.experienceCopy = this.staticCopyService.getJsonCopy().experience;
     this.tiles = this.timelineGridService.buildGridConfig(
       [
+        ExperienceCompanies.CITI,
         ExperienceCompanies.CHARTER_COMMUNICATIONS,
         ExperienceCompanies.FAIRFIELD_UNIVERSITY,
         ExperienceCompanies.SICOBRA,
@@ -66,7 +67,7 @@ export class ExperienceComponent implements OnInit, AfterViewInit {
       4
     );
   }
-  ngAfterViewInit(): void {}
+  ngAfterViewInit(): void { }
 
   constructor(
     private staticCopyService: StaticCopyService,

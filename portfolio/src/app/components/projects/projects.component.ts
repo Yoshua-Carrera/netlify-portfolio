@@ -25,6 +25,7 @@ export class ProjectsComponent implements OnInit {
     ];
     this.projectsCopy = this.staticCopyService.getJsonCopy().projects;
     this.projectConfigs = [
+      this.projectsCopy.citi,
       this.projectsCopy.spectrumWeb,
       this.projectsCopy.chemquestApp,
       this.projectsCopy.catManga,
@@ -36,5 +37,5 @@ export class ProjectsComponent implements OnInit {
     this.activeChip = chip;
   }
 
-  constructor(private staticCopyService: StaticCopyService) {}
+  constructor(private staticCopyService: StaticCopyService) { }
 }
